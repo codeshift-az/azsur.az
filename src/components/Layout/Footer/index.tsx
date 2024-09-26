@@ -18,10 +18,10 @@ const Footer = () => {
               <p> Redug Lares dolor sit amet, consectetur adipisicing elit. Minima in nostrum, veniam. Esse est assumenda inventore, facere adipisci tenetur.</p>
               <div className="footer-icons">
                 <ul>
-                  <li><a href="#"><i className="fa fa-facebook" /></a></li>
-                  <li><a href="#"><i className="fa fa-twitter" /></a></li>
-                  <li><a href="#"><i className="fa fa-google" /></a></li>
-                  <li><a href="#"><i className="fa fa-pinterest" /></a></li>
+                  <li><Link to="#"><i className="fa fa-facebook" /></Link></li>
+                  <li><Link to="#"><i className="fa fa-twitter" /></Link></li>
+                  <li><Link to="#"><i className="fa fa-google" /></Link></li>
+                  <li><Link to="#"><i className="fa fa-pinterest" /></Link></li>
                 </ul>
               </div>
             </div>
@@ -47,12 +47,12 @@ const Footer = () => {
             <div className="footer-head">
               <h4>flicker</h4>
               <div className="flicker-img">
-                <a href="#"><img src="/src/assets/images/footer/1.jpg" /></a>
-                <a href="#"><img src="/src/assets/images/footer/7.jpg" /></a>
-                <a href="#"><img src="/src/assets/images/footer/8.jpg" /></a>
-                <a href="#"><img src="/src/assets/images/footer/4.jpg" /></a>
-                <a href="#"><img src="/src/assets/images/footer/5.jpg" /></a>
-                <a href="#"><img src="/src/assets/images/footer/6.jpg" /></a>
+                <Link to="#"><img src="/src/assets/images/footer/1.jpg" /></Link>
+                <Link to="#"><img src="/src/assets/images/footer/7.jpg" /></Link>
+                <Link to="#"><img src="/src/assets/images/footer/8.jpg" /></Link>
+                <Link to="#"><img src="/src/assets/images/footer/4.jpg" /></Link>
+                <Link to="#"><img src="/src/assets/images/footer/5.jpg" /></Link>
+                <Link to="#"><img src="/src/assets/images/footer/6.jpg" /></Link>
               </div>
             </div>
           </div>
@@ -64,15 +64,15 @@ const Footer = () => {
               <div className="popular-tag">
                 <h4>tags</h4>
                 <ul>
-                  <li><a href="#">Building</a></li>
-                  <li><a href="#">Isolation</a></li>
-                  <li><a href="#">Interior</a></li>
-                  <li><a href="#">Electrical</a></li>
-                  <li><a href="#">Energy</a></li>
-                  <li><a href="#">floring</a></li>
-                  <li><a href="#">painting</a></li>
-                  <li><a href="#">Building</a></li>
-                  <li><a href="#">Building</a></li>
+                  <li><Link to="#">Building</Link></li>
+                  <li><Link to="#">Isolation</Link></li>
+                  <li><Link to="#">Interior</Link></li>
+                  <li><Link to="#">Electrical</Link></li>
+                  <li><Link to="#">Energy</Link></li>
+                  <li><Link to="#">floring</Link></li>
+                  <li><Link to="#">painting</Link></li>
+                  <li><Link to="#">Building</Link></li>
+                  <li><Link to="#">Building</Link></li>
                 </ul>
               </div>
             </div>

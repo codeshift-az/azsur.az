@@ -231,14 +231,7 @@ body {
 .mainmenu ul#nav> li> a{
   position:relative;
 }
-.mainmenu ul#nav > li > a::after {
-  content: "";
-  font-family: fontawesome;
-  font-size: 17px;
-  position: absolute;
-  right: -3px;
-  top: 1px;
-}
+
 .mainmenu ul li:nth-child(2) a:after{
 	display:none;
 }
@@ -1379,7 +1372,7 @@ tab-menu {
 /*  16.service page Area
 /*----------------------------------------*/
 .breadcrumb-area {
-  background: rgba(0, 0, 0, 0) url("/src/assets/images/background/ser.jpg") no-repeat scroll center top / cover ;
+  background: rgba(0, 0, 0, 0)  no-repeat scroll center top / cover ;
   background-attachment: fixed;
 }
 .overly-bread {
@@ -2073,5 +2066,11 @@ width: 100%;
 }
 
 
+.mobile-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
 
 
