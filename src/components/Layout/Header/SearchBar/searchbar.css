@@ -9,6 +9,11 @@
 
 }
 
+.shadow{
+  box-shadow: 2px 9px 23px -3px rgba(0,0,0,0.75);
+  transition: 1s;
+}
+
 .search-input-box{
     position: relative;
     height: 100%;

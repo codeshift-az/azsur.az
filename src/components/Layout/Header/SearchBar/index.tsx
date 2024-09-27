@@ -2,20 +2,20 @@ import { useState } from "react";
 import "./searchbar.css";
 
 const SearchBar = () => {
-  const [searchBarVisible, setSearchBarVisible] = useState(false);
+  const [searchBarVisible, setSearchBarVisible] = useState<boolean>(false);
 
   return (
     <form action="#">
-      <div className="search-option hidden-xs">
+      <div className={`search-option hidden-xs ${!searchBarVisible?"":"shadow"}`}>
         <div className="search-input-box">
           <input
             type="text"
             placeholder="Search..."
-            className={`search-input-${!searchBarVisible && "in"}visible`}
+            className={`search-input-${!searchBarVisible?"in":""}visible`}
           />
           <button
             type="submit"
-            className={`search-input-${!searchBarVisible && "in"}visible`}
+            className={`search-input-${!searchBarVisible?"in":""}visible`}
           >
             <i className="fa fa-search" />
           </button>

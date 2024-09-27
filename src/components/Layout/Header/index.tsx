@@ -4,8 +4,25 @@ import { LOGO } from "@/assets/images";
 import MobileMenu from "./MobileMenu";
 import TopBar from "./TopBar";
 import { Link } from "react-router-dom";
+import { useEffect, useRef } from "react";
 
 const Header = () => {
+  const headerRef=useRef<HTMLElement>(null)
+
+
+    useEffect(()=>{
+      window.addEventListener('scroll',()=>{
+        if(headerRef.current){
+          if(window.scrollY>160){
+            headerRef.current.classList.add('headeropacityeffect')
+          }else{
+            headerRef.current.classList.remove('headeropacityeffect')
+          }
+        }
+      } 
+    )
+  },[])
+  
   return (
     <>
       {/* Start top bar */}
@@ -14,7 +31,7 @@ const Header = () => {
         mail={"info@royalsteel.com"}
         phone={"+ (1800) - 354 - 586"}
       />
-      <header>
+      <header >
         <div id="sticker" className="header-area">
           <div className="container">
             <div className="row">

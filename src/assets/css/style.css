@@ -153,6 +153,11 @@ body {
 /*----------------------------------------*/
 /*  2.Header Area 
 /*----------------------------------------*/
+header{
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
 .topbar-left ul li {
 	display: inline-block;
 }
@@ -206,6 +211,11 @@ body {
 .logo a {
   display: inline-block;
 }
+
+/* .headeropacityeffect{
+  background: rgb(31,30,30);
+  background: linear-gradient(0deg, rgba(31,30,30,0.7763480392156863) 100%, rgba(31,30,30,0.8435749299719888) 100%);
+} */
 /*-------------------------------
   2.1 mainmenu 
 --------------------------------*/
