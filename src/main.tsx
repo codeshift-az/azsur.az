@@ -15,8 +15,8 @@ import { HelmetProvider } from "react-helmet-async";
 import "./i18n";
 
 // css
-import '../src/assets/css/style.css'
-import '../src/assets/css/responsive.css'
+import "@/assets/css/style.css";
+import "@/assets/css/responsive.css";
 
 // App
 import App from "./App.tsx";
