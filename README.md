@@ -1,8 +1,4 @@
-# React Project Template
-
-## Description
-
-This is a template for a React Project. It includes a basic setup for a React project.
+# azsur.az
 
 ## Requirements
 
@@ -15,7 +11,7 @@ This is a template for a React Project. It includes a basic setup for a React pr
 1. Clone the repository
 
     ```bash
-    git clone https://github.com/tarlansoltanov/react-project-template.git
+    git clone https://github.com/codeshift-az/azsur.az.git
     ```
 
 2. Install dependencies
