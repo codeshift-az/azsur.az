@@ -497,17 +497,17 @@ header {
 /*------------------------------
   3. subscribe area
 --------------------------------*/
-.subscribe-area {
+.suscribe-area {
   background: #fbb700 none repeat scroll 0 0;
   padding: 30px 0;
 }
 
-.subscribe-text {
+.suscribe-text {
   display: block;
   padding: 10px 0;
 }
 
-.subscribe-text h3 {
+.suscribe-text h3 {
   color: #fff;
   display: inline-block;
   margin: 0;
@@ -2558,38 +2558,4 @@ span.email-notes {
   .mobile-dropdown-menu-active {
     padding: 0 50px;
   }
-}
-
-.suscribe-area {
-  background: #fbb700 none repeat scroll 0 0;
-  padding: 30px 0;
-}
-.suscribe-text {
-  display: block;
-  padding: 10px 0;
-}
-.suscribe-text h3 {
-  color: #fff;
-  display: inline-block;
-  margin: 0;
-  text-transform: uppercase;
-  font-size: 20px;
-  font-weight: 600;
-}
-.sus-btn {
-  background: #fff none repeat scroll 0 0;
-  border: 2px solid #fff;
-  color: #fbb700;
-  display: inline-block;
-  font-size: 16px;
-  font-weight: 700;
-  margin-left: 100px;
-  padding: 10px 20px;
-  text-decoration: none;
-  text-transform: uppercase;
-}
-.sus-btn:hover {
-  background: #fbb700 none repeat scroll 0 0;
-  border: 2px solid #fff;
-  color: #fff;
 }

@@ -1,4 +1,4 @@
-const Suscribe = () => {
+const Subscribe = () => {
   return (
     <div className="suscribe-area">
       <div className="container">
@@ -17,4 +17,4 @@ const Suscribe = () => {
   );
 };
 
-export default Suscribe;
+export default Subscribe;

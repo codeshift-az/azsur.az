@@ -1,5 +1,4 @@
-// Component
-import MemberCard from "./component/memberCard";
+import { Link } from "react-router-dom";
 
 // Assets
 import {
@@ -52,11 +51,34 @@ const OurTeams = () => {
             {memberData?.map((item) => {
               return (
                 <div className="col-lg-3 col-md-3 col-sm-4" key={item.id}>
-                  <MemberCard
-                    name={item.name}
-                    image={item.img}
-                    position={item.position}
-                  />
+                  <div className="single-member">
+                    <div className="team-img">
+                      <Link to="#">
+                        <img src={item.img} alt="" />
+                      </Link>
+                      <div className="team-hover footer-icons">
+                        <ul>
+                          <li>
+                            <Link to="#">
+                              <i className="fa fa-facebook"></i>
+                            </Link>
+                          </li>
+
+                          <li>
+                            <Link to="#">
+                              <i className="fa fa-instagram"></i>
+                            </Link>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div className="team-content text-center">
+                      <h4>
+                        <Link to="#">{item.name}</Link>
+                      </h4>
+                      <p>{item.position}</p>
+                    </div>
+                  </div>
                 </div>
               );
             })}
