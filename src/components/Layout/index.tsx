@@ -1,5 +1,6 @@
 import Footer from "./Footer";
 import Header from "./Header";
+import ScrollUp from "./ScrollUp";
 import TopBar from "./TopBar";
 
 interface Props {
@@ -13,6 +14,7 @@ const Layout = ({ children }: Props) => {
       <Header />
       <main>{children}</main>
       <Footer />
+      <ScrollUp/>
     </div>
   );
 };
