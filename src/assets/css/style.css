@@ -2537,12 +2537,6 @@ span.email-notes {
   font-weight: 700;
 }
 
-@media (max-width: 375px) {
-  .mobile-dropdown-menu-active {
-    padding: 0 50px;
-  }
-}
-
 @media (max-width: 1200px) {
   .mobile-dropdown-menu-active {
     padding: 0 50px;
