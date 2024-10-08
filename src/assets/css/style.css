@@ -141,6 +141,11 @@ ul {
   transition: all 0.3s ease 0s;
   width: 45px;
 }
+.scrollUp {
+  position: fixed;
+  z-index: 2147483647;
+  display: block;
+}
 
 #scrollUp:hover {
   background: #fbb700;
@@ -589,7 +594,6 @@ header {
   position: relative;
   text-transform: uppercase;
 }
-
 .section-headline h3::before {
   background: #333 none repeat scroll 0 0;
   bottom: 0;
@@ -599,7 +603,6 @@ header {
   position: absolute;
   width: 60%;
 }
-
 .section-headline h3::after {
   background: #fbb700 none repeat scroll 0 0;
   bottom: -1px;
@@ -610,7 +613,6 @@ header {
   width: 30%;
   z-index: 222;
 }
-
 .section-headline p {
   color: #444;
   font-family: lato;
@@ -618,46 +620,37 @@ header {
   font-style: italic;
   margin-bottom: 20px;
 }
-
 .area-padding {
   padding: 60px 0;
 }
-
 .project-area {
   background: #f1f1f1 none repeat scroll 0 0;
 }
-
 .single-awesome-project {
   float: left;
   overflow: hidden;
   width: 100%;
 }
-
 .first-item {
   margin-bottom: 30px;
 }
-
 .awesome-img {
   display: block;
   width: 100%;
   height: 100%;
   position: relative;
 }
-
 .awesome-img > a {
   display: block;
   position: relative;
 }
-
 .single-awesome-project:hover .awesome-img > a::after {
   opacity: 1;
 }
-
 .single-awesome-project:hover .add-actions {
   opacity: 1;
   bottom: 0;
 }
-
 .awesome-img > a::after {
   background: rgba(0, 0, 0, 0.7) none repeat scroll 0 0;
   content: "";
@@ -669,7 +662,6 @@ header {
   opacity: 0;
   transition: 0.4s;
 }
-
 .add-actions {
   bottom: 50px;
   display: block;
@@ -681,50 +673,41 @@ header {
   transition: all 0.4s ease 0s;
   width: 100%;
 }
-
 .project-dec {
   display: inline-block;
   float: left;
   padding: 15px 0;
 }
-
 .project-dec h5 {
   margin-bottom: 5px;
 }
-
 .project-dec h5 a:hover {
   color: #fbb700;
 }
-
 .project-dec h5 a {
   color: #ddd;
   font-size: 16px;
   text-decoration: none;
   text-transform: capitalize;
 }
-
 .project-dec span {
   color: #ddd;
 }
-
 .project-action-btn {
   float: right;
   padding: 19px 0;
   text-align: center;
   transition: all 1s ease 0s;
 }
-
 .project-action-btn li {
   display: inline-block;
   margin: 0 2px;
 }
-
 .project-action-btn li a i:hover {
   border: 1px solid #fbb700;
   color: #fff;
   background: #fbb700;
 }
-
 .project-action-btn li a i {
   border: 1px solid #ddd;
   color: #ddd;
@@ -2003,7 +1986,7 @@ tab-menu {
 .portfolio-2 .single-awesome-project {
   float: left;
   overflow: hidden;
-  width: 33.34%;
+  width: 32.34%;
 }
 
 .portfolio-3 .single-awesome-project {
@@ -2554,8 +2537,11 @@ span.email-notes {
   font-weight: 700;
 }
 
-@media (max-width: 375px) {
+@media (max-width: 1200px) {
   .mobile-dropdown-menu-active {
     padding: 0 50px;
   }
+}
+.yarl__container {
+  background-color: #000000d9 !important;
 }

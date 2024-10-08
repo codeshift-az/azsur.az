@@ -7,6 +7,9 @@ export const publicRoutes = [
   // Contact
   { path: "/contact", component: <Pages.Contact /> },
 
+  // Projects
+  { path: "/projects", component: <Pages.Projects /> },
+
   // About
   { path: "/about", component: <Pages.About /> },
 
