@@ -90,22 +90,6 @@ const Contact = () => {
           </div>
         </div>
       </div>
-
-      {/* Start Subscribe Area */}
-      <div className="subscribe-area">
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-              <div className="subscribe-text text-center">
-                <h3>Welcome to our Royalsteel construction company</h3>
-                <Link className="sus-btn" to="/contact">
-                  Get a quote
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
     </Layout>
   );
 };

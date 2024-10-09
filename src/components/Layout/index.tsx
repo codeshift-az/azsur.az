@@ -1,3 +1,4 @@
+import Subscribe from "../Subscribe";
 import Footer from "./Footer";
 import Header from "./Header";
 import ScrollUp from "./ScrollUp";
@@ -13,8 +14,9 @@ const Layout = ({ children }: Props) => {
       <TopBar />
       <Header />
       <main>{children}</main>
+      <Subscribe />
       <Footer />
-      <ScrollUp/>
+      <ScrollUp />
     </div>
   );
 };

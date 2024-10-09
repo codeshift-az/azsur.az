@@ -7,7 +7,6 @@ import Banner from "./sections/Banner";
 import AboutUs from "./sections/AboutUs";
 import OurTeams from "./sections/OurTeams";
 import OurSkill from "./sections/OurSkill";
-import Subscribe from "@/components/Subscribe";
 
 const About = () => {
   return (
@@ -17,7 +16,6 @@ const About = () => {
       <AboutUs />
       <OurTeams />
       <OurSkill />
-      <Subscribe />
     </Layout>
   );
 };

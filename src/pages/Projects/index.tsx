@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 // Light Box
 import Lightbox from "yet-another-react-lightbox";
@@ -169,9 +170,9 @@ const Projects = () => {
                           </a>
                         </li>
                         <li>
-                          <a href="#">
+                          <Link to="/projects/:slug">
                             <i className="fa fa-link"></i>
-                          </a>
+                          </Link>
                         </li>
                       </ul>
                     </div>

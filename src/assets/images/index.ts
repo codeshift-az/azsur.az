@@ -13,6 +13,9 @@ export { default as ProjectImg5 } from "./projects/port5.jpg";
 export { default as ProjectImg6 } from "./projects/port6.jpg";
 export { default as ProjectImg7 } from "./projects/port8.jpg";
 
+// Projects Details
+export { default as ProjectDetailImg } from "./projects/details/cons.jpg";
+
 // About Page 
 
 // Banner 
