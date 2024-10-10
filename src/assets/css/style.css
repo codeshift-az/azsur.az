@@ -2545,3 +2545,12 @@ span.email-notes {
 .yarl__container {
   background-color: #000000d9 !important;
 }
+.yarl__root.yarl__relative{
+max-width: unset !important;
+margin: 0 !important;
+}
+
+.yarl__slide_image.yarl__slide_image_cover{
+  max-width: unset !important;
+  max-height: unset !important;
+}

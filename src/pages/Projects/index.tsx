@@ -151,9 +151,9 @@ const Projects = () => {
                     " "
                   )} col`}>
                   <div className="awesome-img">
-                    <a href="#">
+                    <Link to="/projects/:slug">
                       <img src={project.img} alt={project.title} />
-                    </a>
+                    </Link>
                     <div className="add-actions">
                       <div className="project-dec">
                         <h5>
