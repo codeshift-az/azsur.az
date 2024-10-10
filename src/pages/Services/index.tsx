@@ -10,69 +10,72 @@ import {
   ServicesImg3,
   ServicesImg4,
 } from "@/assets/images";
+
+interface imgService {
+  id: number;
+  url: string;
+}
+interface Service {
+  id: number;
+  title: string;
+  slug: string;
+  description: string;
+  images: imgService[];
+}
+
 const Services = () => {
-  const ServiceData = [
+  const ServiceData: Service[] = [
     {
       id: 1,
-      img: ServicesImg,
       title: "Beguiled and demo",
-      author: "UsdTheme",
-      comments: 0,
-      date: { day: "09", month: "Jan" },
+      slug: "Beguiled and demo",
       description:
         "Redug Lerse dolor sit amet, consectetur adipisicing elit. Dignissimos, culpa nobis at perspiciatis sit sint, adipisci neque illum. Adipisci dolores, vitae! Voluptatem consequatur.",
+      images: [{ id: 1, url: ServicesImg }],
     },
+
     {
       id: 2,
-      img: ServicesImg2,
       title: "Another blog post",
-      author: "UsdTheme",
-      comments: 1,
-      date: { day: "15", month: "Feb" },
+      slug: "Another blog post",
+      images: [{ id: 1, url: ServicesImg2 }],
       description:
         "Redug Lerse dolor sit amet, consectetur adipisicing elit. Dignissimos, culpa nobis at perspiciatis sit sint, adipisci neque illum. Adipisci dolores, vitae! Voluptatem consequatur.",
     },
     {
       id: 3,
-      img: ServicesImg3,
       title: "Third blog post",
-      author: "UsdTheme",
-      comments: 2,
-      date: { day: "22", month: "Mar" },
+      slug: "Another blog post",
+      images: [{ id: 1, url: ServicesImg3 }],
       description:
         "Redug Lerse dolor sit amet, consectetur adipisicing elit. Dignissimos, culpa nobis at perspiciatis sit sint, adipisci neque illum. Adipisci dolores, vitae! Voluptatem consequatur.",
     },
     {
       id: 4,
-      img: ServicesImg4,
       title: "Fourth blog post",
-      author: "UsdTheme",
-      comments: 3,
-      date: { day: "01", month: "Apr" },
+      slug: "Another blog post",
+      images: [{ id: 1, url: ServicesImg4 }],
       description:
         "Redug Lerse dolor sit amet, consectetur adipisicing elit. Dignissimos, culpa nobis at perspiciatis sit sint, adipisci neque illum. Adipisci dolores, vitae! Voluptatem consequatur.",
     },
     {
       id: 5,
-      img: ServicesImg,
       title: "Fifth blog post",
-      author: "UsdTheme",
-      comments: 0,
-      date: { day: "10", month: "May" },
+      slug: "Another blog post",
+      images: [{ id: 1, url: ServicesImg }],
       description:
         "Redug Lerse dolor sit amet, consectetur adipisicing elit. Dignissimos, culpa nobis at perspiciatis sit sint, adipisci neque illum. Adipisci dolores, vitae! Voluptatem consequatur.",
     },
     {
       id: 6,
-      img: ServicesImg4,
       title: "Sixth blog post",
-      author: "UsdTheme",
-      comments: 4,
-      date: { day: "18", month: "Jun" },
+      slug: "Another blog post",
+      images: [{ id: 1, url: ServicesImg4 }],
       description:
         "Redug Lerse dolor sit amet, consectetur adipisicing elit. Dignissimos, culpa nobis at perspiciatis sit sint, adipisci neque illum. Adipisci dolores, vitae! Voluptatem consequatur.",
     },
   ];
+
   return (
     <Layout>
       <Breadcrumb heading="Services" pageName="Services" />
@@ -81,23 +84,17 @@ const Services = () => {
           <div className="row">
             {ServiceData?.map((item) => {
               return (
-                <div className="col-lg-4 col-md-6 col-sm-12">
+                <div className="col-lg-4 col-md-6 col-sm-12" key={item.id}>
                   <div className="blog-post blog-1 ">
                     <div className="banner-box">
                       <a href="#" className="image-blog">
-                        <img src={item.img} alt="" />
-                        <span className="date-time">
-                          <span className="days">09</span>
-                          <span className="months">Jan</span>
-                        </span>
+                        <img src={item.images[0].url} alt="" />
                       </a>
                       <div className="single-blog">
                         <a href="#">
                           <h4 className="sec-head">Beguiled and demo</h4>
                         </a>
-                        <p className="author">
-                          By UsdTheme<span> ( 0 comments )</span>
-                        </p>
+
                         <p>{item.description}</p>
                         <a className="blog-btn" href="#">
                           Read More
