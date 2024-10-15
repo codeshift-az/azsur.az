@@ -13,14 +13,17 @@ const resources = {
   ru: translationsRU,
 };
 
+// Supported languages
+const supportedLngs = ['az', 'en', 'ru'];
+
 // Language detection
-const lng = localStorage.getItem('LANG')?.toString();
+const lng =
+  (supportedLngs.includes(window.location.pathname.split('/')[1]) &&
+    window.location.pathname.split('/')[1]) ||
+  localStorage.getItem('LANG')?.toString();
 
 // Fallback language
 const fallbackLng = 'az';
-
-// Supported languages
-const supportedLngs = ['az', 'en', 'ru'];
 
 // Development mode
 const debug = import.meta.env.MODE === 'development';
