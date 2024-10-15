@@ -10,36 +10,10 @@ import Inline from 'yet-another-react-lightbox/plugins/inline';
 import Breadcrumb from '@/components/Breadcrumb';
 import Layout from '@/components/Layout';
 
+import { getProjectList } from '@/api/project';
 import { getServiceDetails } from '@/api/service';
 
 import NotFound from '../NotFound';
-
-const relatedProjects = [
-  {
-    id: 1,
-    slug: 'project-1',
-    title: 'Redug Lerse dolor sit amet consect adipis elit.',
-    img: 'https://placehold.co/100x70/webp',
-  },
-  {
-    id: 2,
-    slug: 'project-2',
-    title: 'Redug Lerse dolor sit amet consect adipis elit.',
-    img: 'https://placehold.co/100x70/webp',
-  },
-  {
-    id: 3,
-    slug: 'project-3',
-    title: 'Redug Lerse dolor sit amet consect adipis elit.',
-    img: 'https://placehold.co/100x70/webp',
-  },
-  {
-    id: 4,
-    slug: 'project-4',
-    title: 'Redug Lerse dolor sit amet consect adipis elit.',
-    img: 'https://placehold.co/100x70/webp',
-  },
-];
 
 const ServiceDetails = () => {
   const { pathname } = useLocation();
@@ -50,6 +24,11 @@ const ServiceDetails = () => {
     error,
   } = useSWR(['service', pathname], () =>
     getServiceDetails(pathname.split('/').pop() as string)
+  );
+
+  const { data: relatedProjects, isLoading: projectsIsLoading } = useSWR(
+    ['projects', { service: service?.slug }],
+    () => getProjectList({ service: service?.slug })
   );
 
   const { t } = useTranslation('pages', { keyPrefix: 'serviceDetails' });
@@ -64,7 +43,8 @@ const ServiceDetails = () => {
 
   const slides = service?.images.map((image) => ({ src: image.image }));
 
-  if (isLoading || !service) return <span>Loading...</span>;
+  if (projectsIsLoading || isLoading || !service)
+    return <span>Loading...</span>;
 
   if (error && error.status === 404) return <NotFound />;
 
@@ -83,10 +63,13 @@ const ServiceDetails = () => {
 
                     <div className="recent-post">
                       {relatedProjects?.map((item) => (
-                        <div className="recent-single-post" key={item.id}>
+                        <div className="recent-single-post" key={item.slug}>
                           <div className="post-img">
                             <Link to={`/projects/${item.slug}`}>
-                              <img src={item.img} alt={item.title} />
+                              <img
+                                src={item.images[0].image}
+                                alt={item.title}
+                              />
                             </Link>
                           </div>
                           <div className="pst-content">

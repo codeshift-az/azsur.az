@@ -4,7 +4,7 @@ import axiosInstance from '..';
 
 export const getServiceList = async () => {
   const { data } = await axiosInstance.get('/services?limit=all');
-  return data;
+  return data as Service[];
 };
 
 export const getServiceDetails = async (slug: string) => {
