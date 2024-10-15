@@ -1,25 +1,18 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 import { useTranslation } from 'react-i18next';
 
+import useSWR from 'swr';
 import Lightbox from 'yet-another-react-lightbox';
 import Inline from 'yet-another-react-lightbox/plugins/inline';
 
 import Breadcrumb from '@/components/Breadcrumb';
 import Layout from '@/components/Layout';
 
-const service = {
-  slug: 'service-1',
-  title: 'Service Details',
-  images: [
-    { id: 1, url: 'https://placehold.co/1200x700/webp' },
-    { id: 2, url: 'https://placehold.co/900x600/webp' },
-    { id: 3, url: 'https://placehold.co/900x600/webp' },
-  ],
-  description:
-    'Aliquam et metus pharetra, bibendum massa nec, fermentum odio. Nunc id leo ultrices, mollis ligula in, finibus tortor. Mauris eu dui ut lectus fermentum eleifend.Pellentesque faucibus sem ante, non malesuada odio variusnec. Suspendisse potenti. Proin consectetur aliquam odionec fringilla. Sed interdum at justo in efficitur. Vivamusgravida volutpat sodales. Fusce ornare sit amet ligulacondimentum sagittis.',
-};
+import { getServiceDetails } from '@/api/service';
+
+import NotFound from '../NotFound';
 
 const relatedProjects = [
   {
@@ -49,6 +42,16 @@ const relatedProjects = [
 ];
 
 const ServiceDetails = () => {
+  const { pathname } = useLocation();
+
+  const {
+    data: service,
+    isLoading,
+    error,
+  } = useSWR(['service', pathname], () =>
+    getServiceDetails(pathname.split('/').pop() as string)
+  );
+
   const { t } = useTranslation('pages', { keyPrefix: 'serviceDetails' });
 
   const [open, setOpen] = useState(false);
@@ -59,7 +62,11 @@ const ServiceDetails = () => {
   const updateIndex = ({ index: current }: { index: number }) =>
     setIndex(current);
 
-  const slides = service.images.map((image) => ({ src: image.url }));
+  const slides = service?.images.map((image) => ({ src: image.image }));
+
+  if (isLoading || !service) return <span>Loading...</span>;
+
+  if (error && error.status === 404) return <NotFound />;
 
   return (
     <Layout>
