@@ -16,6 +16,9 @@ export const publicRoutes = [
   // About
   { path: "/about", component: <Pages.About /> },
 
+  // Services
+  { path: "/services", component: <Pages.Services /> },
+
   // Not Found
   { path: "*", component: <Pages.NotFound /> },
 ];
