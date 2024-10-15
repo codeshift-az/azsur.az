@@ -1,27 +1,27 @@
-import * as Pages from "@/pages";
+import * as Pages from '@/pages';
 
 export const publicRoutes = [
   // Home
-  { path: "/", component: <Pages.Home /> },
+  { path: '/', component: <Pages.Home /> },
 
   // Contact
-  { path: "/contact", component: <Pages.Contact /> },
+  { path: '/contact', component: <Pages.Contact /> },
 
   // Projects
-  { path: "/projects", component: <Pages.Projects /> },
+  { path: '/projects', component: <Pages.Projects /> },
 
   // Projects Details
-  { path: "/projects/:slug", component: <Pages.ProjectsDetails /> },
+  { path: '/projects/:slug', component: <Pages.ProjectsDetails /> },
 
   // Service Details
-  { path: "/services/service:slug", component: <Pages.ServiceDetails /> },
+  { path: '/services/:slug', component: <Pages.ServiceDetails /> },
 
   // About
-  { path: "/about", component: <Pages.About /> },
+  { path: '/about', component: <Pages.About /> },
 
   // Services
-  { path: "/services", component: <Pages.Services /> },
+  { path: '/services', component: <Pages.Services /> },
 
   // Not Found
-  { path: "*", component: <Pages.NotFound /> },
+  { path: '*', component: <Pages.NotFound /> },
 ];

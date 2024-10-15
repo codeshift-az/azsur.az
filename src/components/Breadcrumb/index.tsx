@@ -1,4 +1,4 @@
-import { BreadcrumbBackground } from "@/assets/images";
+import { BreadcrumbBackground } from '@/assets/images';
 
 interface Props {
   heading: string;

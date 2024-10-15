@@ -1,8 +1,8 @@
-import Subscribe from "../Subscribe";
-import Footer from "./Footer";
-import Header from "./Header";
-import ScrollUp from "./ScrollUp";
-import TopBar from "./TopBar";
+import Subscribe from '../Subscribe';
+import Footer from './Footer';
+import Header from './Header';
+import ScrollUp from './ScrollUp';
+import TopBar from './TopBar';
 
 interface Props {
   children: React.ReactNode;

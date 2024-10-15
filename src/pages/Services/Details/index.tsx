@@ -1,8 +1,8 @@
-import { useState } from "react";
+import { useState } from 'react';
 
-// Components
-import Breadcrumb from "@/components/Breadcrumb";
-import Layout from "@/components/Layout";
+// Reat-Light
+import Lightbox from 'yet-another-react-lightbox';
+import Inline from 'yet-another-react-lightbox/plugins/inline';
 
 // Assets
 import {
@@ -13,11 +13,11 @@ import {
   ServiceDetailImg1,
   ServiceDetailImg2,
   ServiceDetailImg3,
-} from "@/assets/images";
+} from '@/assets/images';
 
-// Reat-Light
-import Lightbox from "yet-another-react-lightbox";
-import Inline from "yet-another-react-lightbox/plugins/inline";
+// Components
+import Breadcrumb from '@/components/Breadcrumb';
+import Layout from '@/components/Layout';
 
 interface imageSlider {
   id: number;
@@ -32,36 +32,36 @@ interface ServiceDetail {
 
 const ServiceDetails = () => {
   const servicetData: ServiceDetail = {
-    slug: "Services",
-    title: "Service Details",
+    slug: 'Services',
+    title: 'Service Details',
     images: [
       { id: 1, url: ProjectDetailImg },
       { id: 2, url: ProjectImg1 },
       { id: 3, url: ProjectImg2 },
     ],
     description:
-      "Aliquam et metus pharetra, bibendum massa nec, fermentum odio. Nunc id leo ultrices, mollis ligula in, finibus tortor. Mauris eu dui ut lectus fermentum eleifend.Pellentesque faucibus sem ante, non malesuada odio variusnec. Suspendisse potenti. Proin consectetur aliquam odionec fringilla. Sed interdum at justo in efficitur. Vivamusgravida volutpat sodales. Fusce ornare sit amet ligulacondimentum sagittis.",
+      'Aliquam et metus pharetra, bibendum massa nec, fermentum odio. Nunc id leo ultrices, mollis ligula in, finibus tortor. Mauris eu dui ut lectus fermentum eleifend.Pellentesque faucibus sem ante, non malesuada odio variusnec. Suspendisse potenti. Proin consectetur aliquam odionec fringilla. Sed interdum at justo in efficitur. Vivamusgravida volutpat sodales. Fusce ornare sit amet ligulacondimentum sagittis.',
   };
 
   const relatedProjects = [
     {
       id: 1,
-      title: "Redug Lerse dolor sit amet consect adipis elit.",
+      title: 'Redug Lerse dolor sit amet consect adipis elit.',
       img: ServiceDetailImg,
     },
     {
       id: 2,
-      title: "Redug Lerse dolor sit amet consect adipis elit.",
+      title: 'Redug Lerse dolor sit amet consect adipis elit.',
       img: ServiceDetailImg1,
     },
     {
       id: 3,
-      title: "Redug Lerse dolor sit amet consect adipis elit.",
+      title: 'Redug Lerse dolor sit amet consect adipis elit.',
       img: ServiceDetailImg2,
     },
     {
       id: 4,
-      title: "Redug Lerse dolor sit amet consect adipis elit.",
+      title: 'Redug Lerse dolor sit amet consect adipis elit.',
       img: ServiceDetailImg3,
     },
   ];
@@ -123,14 +123,14 @@ const ServiceDetails = () => {
                     carousel={{
                       padding: 0,
                       spacing: 0,
-                      imageFit: "cover",
+                      imageFit: 'cover',
                     }}
                     inline={{
                       style: {
-                        width: "100%",
-                        maxWidth: "900px",
-                        aspectRatio: "3 / 2",
-                        margin: "0 auto",
+                        width: '100%',
+                        maxWidth: '900px',
+                        aspectRatio: '3 / 2',
+                        margin: '0 auto',
                       },
                     }}
                   />

@@ -1,10 +1,10 @@
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 // Assets
-import { LOGO } from "@/assets/images";
+import { LOGO } from '@/assets/images';
 
 // Constants
-import { CONTACT_DETAILS } from "@/constants";
+import { CONTACT_DETAILS } from '@/constants';
 
 const Footer = () => {
   return (
@@ -149,7 +149,7 @@ const Footer = () => {
             <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
               <div className="copyright-text text-center">
                 <p>
-                  Copyright © {new Date().getFullYear()}{" "}
+                  Copyright © {new Date().getFullYear()}{' '}
                   <a href="https://www.codeshift.az">CodeShift</a>
                 </p>
               </div>

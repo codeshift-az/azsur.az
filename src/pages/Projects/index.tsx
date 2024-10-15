@@ -1,9 +1,9 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 // Light Box
-import Lightbox from "yet-another-react-lightbox";
-import "yet-another-react-lightbox/styles.css";
+import Lightbox from 'yet-another-react-lightbox';
+import 'yet-another-react-lightbox/styles.css';
 
 // Assets
 import {
@@ -13,66 +13,66 @@ import {
   ProjectImg4,
   ProjectImg5,
   ProjectImg6,
-} from "@/assets/images";
+} from '@/assets/images';
 
 // Components
-import Breadcrumb from "@/components/Breadcrumb";
-import Layout from "@/components/Layout";
-import Subscribe from "@/components/Subscribe";
+import Breadcrumb from '@/components/Breadcrumb';
+import Layout from '@/components/Layout';
+import Subscribe from '@/components/Subscribe';
 
 const Projects = () => {
   const [open, setOpen] = useState(false);
   const [currentSlides, setCurrentSlides] = useState<{ src: string }[]>([]);
 
-  const [filterKey, setFilterKey] = useState("all");
+  const [filterKey, setFilterKey] = useState('all');
 
   const projects = [
     {
       id: 1,
-      title: "Apartment",
-      category: ["isolation", "electricity"],
+      title: 'Apartment',
+      category: ['isolation', 'electricity'],
       img: ProjectImg1,
       images: [ProjectImg1, ProjectImg2, ProjectImg3],
     },
     {
       id: 2,
-      title: "Apartment",
-      category: ["isolation", "building"],
+      title: 'Apartment',
+      category: ['isolation', 'building'],
       img: ProjectImg2,
       images: [ProjectImg2, ProjectImg4],
     },
     {
       id: 3,
-      title: "Apartment",
-      category: ["building", "renovate"],
+      title: 'Apartment',
+      category: ['building', 'renovate'],
       img: ProjectImg3,
       images: [ProjectImg3, ProjectImg5, ProjectImg6],
     },
     {
       id: 4,
-      title: "Apartment",
-      category: ["electricity", "renovate"],
+      title: 'Apartment',
+      category: ['electricity', 'renovate'],
       img: ProjectImg4,
       images: [ProjectImg4],
     },
     {
       id: 5,
-      title: "Apartment",
-      category: ["building", "electricity"],
+      title: 'Apartment',
+      category: ['building', 'electricity'],
       img: ProjectImg5,
       images: [ProjectImg5, ProjectImg1],
     },
     {
       id: 6,
-      title: "Apartment",
-      category: ["isolation", "renovate"],
+      title: 'Apartment',
+      category: ['isolation', 'renovate'],
       img: ProjectImg6,
       images: [ProjectImg6],
     },
   ];
 
   const filteredProjects =
-    filterKey === "all"
+    filterKey === 'all'
       ? projects
       : projects.filter((project) => project.category.includes(filterKey));
 
@@ -100,40 +100,40 @@ const Projects = () => {
                     <li>
                       <a
                         href="#"
-                        className={filterKey === "all" ? "active" : ""}
-                        onClick={() => setFilterKey("all")}>
+                        className={filterKey === 'all' ? 'active' : ''}
+                        onClick={() => setFilterKey('all')}>
                         All
                       </a>
                     </li>
                     <li>
                       <a
                         href="#"
-                        className={filterKey === "building" ? "active" : ""}
-                        onClick={() => setFilterKey("building")}>
+                        className={filterKey === 'building' ? 'active' : ''}
+                        onClick={() => setFilterKey('building')}>
                         Building
                       </a>
                     </li>
                     <li>
                       <a
                         href="#"
-                        className={filterKey === "isolation" ? "active" : ""}
-                        onClick={() => setFilterKey("isolation")}>
+                        className={filterKey === 'isolation' ? 'active' : ''}
+                        onClick={() => setFilterKey('isolation')}>
                         Isolation
                       </a>
                     </li>
                     <li>
                       <a
                         href="#"
-                        className={filterKey === "electricity" ? "active" : ""}
-                        onClick={() => setFilterKey("electricity")}>
+                        className={filterKey === 'electricity' ? 'active' : ''}
+                        onClick={() => setFilterKey('electricity')}>
                         Electricity
                       </a>
                     </li>
                     <li>
                       <a
                         href="#"
-                        className={filterKey === "renovate" ? "active" : ""}
-                        onClick={() => setFilterKey("renovate")}>
+                        className={filterKey === 'renovate' ? 'active' : ''}
+                        onClick={() => setFilterKey('renovate')}>
                         Renovate
                       </a>
                     </li>
@@ -143,12 +143,12 @@ const Projects = () => {
             </div>
             <div
               className="awesome-project-content portfolio-2 row"
-              style={{ position: "relative" }}>
+              style={{ position: 'relative' }}>
               {filteredProjects.map((project) => (
                 <div
                   key={project.id}
                   className={` single-awesome-project ${project.category.join(
-                    " "
+                    ' '
                   )} col`}>
                   <div className="awesome-img">
                     <Link to="/projects/:slug">
@@ -159,7 +159,7 @@ const Projects = () => {
                         <h5>
                           <a href="#">{project.title}</a>
                         </h5>
-                        <span>{project.category.join(", ")}</span>
+                        <span>{project.category.join(', ')}</span>
                       </div>
                       <ul className="project-action-btn">
                         <li>

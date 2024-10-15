@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react';
 
 interface Props {
   progressBar: number;
@@ -11,7 +11,7 @@ const ProgressBar = ({ progressBar }: Props) => {
       setProgress(progressBar);
     }, 1200);
     return () => clearTimeout(timer);
-  }, []);
+  }, [setProgress]);
 
   return (
     <div className="progress">

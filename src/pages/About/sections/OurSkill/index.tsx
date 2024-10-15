@@ -1,5 +1,5 @@
 // Component
-import ProgressBar from "./component/progressBar";
+import ProgressBar from './component/progressBar';
 
 const OurSkill = () => {
   return (

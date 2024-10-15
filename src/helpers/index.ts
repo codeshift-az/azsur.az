@@ -3,7 +3,7 @@ export const getPageTitle = (title?: string) => {
   return title ? `${title} | ${PROJECT_NAME}` : `${PROJECT_NAME}`;
 };
 
-export const getFormData = (data: Record<string, any>) => {
+export const getFormData = (data: Record<string, string>) => {
   const formData = new FormData();
   Object.keys(data).forEach((key) => formData.append(key, data[key]));
   return formData;
@@ -11,17 +11,17 @@ export const getFormData = (data: Record<string, any>) => {
 
 export const getURLWithFilterParams = (
   url: string,
-  filters: Record<string, any>
+  filters: Record<string, string>
 ) => {
   const params = convertToSearchParams(filters);
   if (!params.toString()) return url;
   return `${url}?${params.toString()}`;
 };
 
-export const convertToSearchParams = (filters: Record<string, any>) => {
+export const convertToSearchParams = (filters: Record<string, string>) => {
   Object.keys(filters).forEach(
     (key) =>
-      (filters[key] === null || filters[key] === "") && delete filters[key]
+      (filters[key] === null || filters[key] === '') && delete filters[key]
   );
   return new URLSearchParams(filters);
 };

@@ -1,15 +1,13 @@
-// Components
-import Breadcrumb from "@/components/Breadcrumb";
-import Layout from "@/components/Layout";
-import Subscribe from "@/components/Subscribe";
-
-// Assets
 import {
   ServicesImg,
   ServicesImg2,
   ServicesImg3,
   ServicesImg4,
-} from "@/assets/images";
+} from '@/assets/images';
+
+import Breadcrumb from '@/components/Breadcrumb';
+import Layout from '@/components/Layout';
+import Subscribe from '@/components/Subscribe';
 
 interface imgService {
   id: number;
@@ -27,52 +25,52 @@ const Services = () => {
   const ServiceData: Service[] = [
     {
       id: 1,
-      title: "Beguiled and demo",
-      slug: "Beguiled and demo",
+      title: 'Beguiled and demo',
+      slug: 'Beguiled and demo',
       description:
-        "Redug Lerse dolor sit amet, consectetur adipisicing elit. Dignissimos, culpa nobis at perspiciatis sit sint, adipisci neque illum. Adipisci dolores, vitae! Voluptatem consequatur.",
+        'Redug Lerse dolor sit amet, consectetur adipisicing elit. Dignissimos, culpa nobis at perspiciatis sit sint, adipisci neque illum. Adipisci dolores, vitae! Voluptatem consequatur.',
       images: [{ id: 1, url: ServicesImg }],
     },
 
     {
       id: 2,
-      title: "Another blog post",
-      slug: "Another blog post",
+      title: 'Another blog post',
+      slug: 'Another blog post',
       images: [{ id: 1, url: ServicesImg2 }],
       description:
-        "Redug Lerse dolor sit amet, consectetur adipisicing elit. Dignissimos, culpa nobis at perspiciatis sit sint, adipisci neque illum. Adipisci dolores, vitae! Voluptatem consequatur.",
+        'Redug Lerse dolor sit amet, consectetur adipisicing elit. Dignissimos, culpa nobis at perspiciatis sit sint, adipisci neque illum. Adipisci dolores, vitae! Voluptatem consequatur.',
     },
     {
       id: 3,
-      title: "Third blog post",
-      slug: "Another blog post",
+      title: 'Third blog post',
+      slug: 'Another blog post',
       images: [{ id: 1, url: ServicesImg3 }],
       description:
-        "Redug Lerse dolor sit amet, consectetur adipisicing elit. Dignissimos, culpa nobis at perspiciatis sit sint, adipisci neque illum. Adipisci dolores, vitae! Voluptatem consequatur.",
+        'Redug Lerse dolor sit amet, consectetur adipisicing elit. Dignissimos, culpa nobis at perspiciatis sit sint, adipisci neque illum. Adipisci dolores, vitae! Voluptatem consequatur.',
     },
     {
       id: 4,
-      title: "Fourth blog post",
-      slug: "Another blog post",
+      title: 'Fourth blog post',
+      slug: 'Another blog post',
       images: [{ id: 1, url: ServicesImg4 }],
       description:
-        "Redug Lerse dolor sit amet, consectetur adipisicing elit. Dignissimos, culpa nobis at perspiciatis sit sint, adipisci neque illum. Adipisci dolores, vitae! Voluptatem consequatur.",
+        'Redug Lerse dolor sit amet, consectetur adipisicing elit. Dignissimos, culpa nobis at perspiciatis sit sint, adipisci neque illum. Adipisci dolores, vitae! Voluptatem consequatur.',
     },
     {
       id: 5,
-      title: "Fifth blog post",
-      slug: "Another blog post",
+      title: 'Fifth blog post',
+      slug: 'Another blog post',
       images: [{ id: 1, url: ServicesImg }],
       description:
-        "Redug Lerse dolor sit amet, consectetur adipisicing elit. Dignissimos, culpa nobis at perspiciatis sit sint, adipisci neque illum. Adipisci dolores, vitae! Voluptatem consequatur.",
+        'Redug Lerse dolor sit amet, consectetur adipisicing elit. Dignissimos, culpa nobis at perspiciatis sit sint, adipisci neque illum. Adipisci dolores, vitae! Voluptatem consequatur.',
     },
     {
       id: 6,
-      title: "Sixth blog post",
-      slug: "Another blog post",
+      title: 'Sixth blog post',
+      slug: 'Another blog post',
       images: [{ id: 1, url: ServicesImg4 }],
       description:
-        "Redug Lerse dolor sit amet, consectetur adipisicing elit. Dignissimos, culpa nobis at perspiciatis sit sint, adipisci neque illum. Adipisci dolores, vitae! Voluptatem consequatur.",
+        'Redug Lerse dolor sit amet, consectetur adipisicing elit. Dignissimos, culpa nobis at perspiciatis sit sint, adipisci neque illum. Adipisci dolores, vitae! Voluptatem consequatur.',
     },
   ];
 

@@ -1,9 +1,10 @@
-import i18n from "i18next";
-import { initReactI18next } from "react-i18next";
+import { initReactI18next } from 'react-i18next';
 
-import translationsEN from "./locales/en/translations.json";
-import translationsAZ from "./locales/az/translations.json";
-import translationsRU from "./locales/ru/translations.json";
+import i18n from 'i18next';
+
+import translationsAZ from './locales/az/translations.json';
+import translationsEN from './locales/en/translations.json';
+import translationsRU from './locales/ru/translations.json';
 
 // The translations
 const resources = {
@@ -13,16 +14,16 @@ const resources = {
 };
 
 // Language detection
-const lng = localStorage.getItem("LANG")?.toString();
+const lng = localStorage.getItem('LANG')?.toString();
 
 // Fallback language
-const fallbackLng = "en";
+const fallbackLng = 'az';
 
 // Supported languages
-const supportedLngs = ["en", "az", "ru"];
+const supportedLngs = ['az', 'en', 'ru'];
 
 // Development mode
-const debug = import.meta.env.MODE === "development";
+const debug = import.meta.env.MODE === 'development';
 
 i18n.use(initReactI18next).init({
   lng,

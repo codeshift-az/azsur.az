@@ -1,7 +1,7 @@
-import { useState } from "react";
+import { useState } from 'react';
 
 // Assets
-import { AboutUsImg } from "@/assets/images";
+import { AboutUsImg } from '@/assets/images';
 
 const AboutUs = () => {
   const [showPanel, setShowPanel] = useState<boolean[]>([
@@ -31,7 +31,7 @@ const AboutUs = () => {
             </div>
           </div>
         </div>
-      
+
         <div className="row">
           <div className="col-lg-6 col-md-6 col-sm-12 col-xs-12">
             <div className="about-dec">
@@ -49,25 +49,25 @@ const AboutUs = () => {
                       <a
                         onClick={() => togglePanel(0)}
                         className={`${
-                          showPanel[0] ? "active " : "collapsed"
+                          showPanel[0] ? 'active ' : 'collapsed'
                         } `}>
                         <span className="acc-icons"></span>Aspernatur
                       </a>
                     </h4>
                   </div>
                   <div
-                    className={`panel-collapse ${showPanel[0] ? "in" : ""}`}
+                    className={`panel-collapse ${showPanel[0] ? 'in' : ''}`}
                     style={{
-                      maxHeight: showPanel[0] ? "500px" : "0px",
-                      overflow: "hidden",
-                      transition: "max-height 0.7s ease-out",
+                      maxHeight: showPanel[0] ? '500px' : '0px',
+                      overflow: 'hidden',
+                      transition: 'max-height 0.7s ease-out',
                     }}>
                     <div className="panel-body">
                       <p>
                         Redug lerse dolor sit amet, consectetur adipisicing
                         elit. Aspernatur, tempore, commodi quas mollitia dolore
                         magnam quidem repellat, culpa voluptates laboriosam
-                        maiores alias accusamus recusandae vero{" "}
+                        maiores alias accusamus recusandae vero{' '}
                       </p>
                     </div>
                   </div>
@@ -79,18 +79,18 @@ const AboutUs = () => {
                       <a
                         onClick={() => togglePanel(1)}
                         className={`  ${
-                          showPanel[1] ? "active" : " collapsed"
+                          showPanel[1] ? 'active' : ' collapsed'
                         }`}>
                         <span className="acc-icons"></span>consectetur
                       </a>
                     </h4>
                   </div>
                   <div
-                    className={`panel-collapse ${showPanel[1] ? "in" : ""}`}
+                    className={`panel-collapse ${showPanel[1] ? 'in' : ''}`}
                     style={{
-                      maxHeight: showPanel[1] ? "500px" : "0px",
-                      overflow: "hidden",
-                      transition: "max-height 0.7s ease-out",
+                      maxHeight: showPanel[1] ? '500px' : '0px',
+                      overflow: 'hidden',
+                      transition: 'max-height 0.7s ease-out',
                     }}>
                     <div className="panel-body">
                       <p>
@@ -100,7 +100,7 @@ const AboutUs = () => {
                         maiores alias accusamus recusandae vero aperiam sint
                         nulla beatae eos. ipsum dolor sit amet, consectetur
                         adipisicing elit. Repellendus nulla praesentium
-                        cupiditate, eos sequi ullam nesciunt enim id, distinctio{" "}
+                        cupiditate, eos sequi ullam nesciunt enim id, distinctio{' '}
                       </p>
                     </div>
                   </div>
@@ -111,17 +111,17 @@ const AboutUs = () => {
                     <h4 className="check-title">
                       <a
                         onClick={() => togglePanel(2)}
-                        className={`${showPanel[2] ? "active" : " collapsed"}`}>
+                        className={`${showPanel[2] ? 'active' : ' collapsed'}`}>
                         <span className="acc-icons"></span> Redug lerse
                       </a>
                     </h4>
                   </div>
                   <div
-                    className={`panel-collapse ${showPanel[2] ? "in" : ""}`}
+                    className={`panel-collapse ${showPanel[2] ? 'in' : ''}`}
                     style={{
-                      maxHeight: showPanel[2] ? "500px" : "0px",
-                      overflow: "hidden",
-                      transition: "max-height 0.7s ease-out",
+                      maxHeight: showPanel[2] ? '500px' : '0px',
+                      overflow: 'hidden',
+                      transition: 'max-height 0.7s ease-out',
                     }}>
                     <div className="panel-body">
                       <p>
@@ -131,7 +131,7 @@ const AboutUs = () => {
                         maiores alias accusamus recusandae vero aperiam sint
                         nulla beatae eos. ipsum dolor sit amet, consectetur
                         adipisicing elit. Repellendus nulla praesentium
-                        cupiditate, eos sequi ullam nesciunt enim id, distinctio{" "}
+                        cupiditate, eos sequi ullam nesciunt enim id, distinctio{' '}
                       </p>
                     </div>
                   </div>
@@ -142,17 +142,17 @@ const AboutUs = () => {
                     <h4 className="check-title">
                       <a
                         onClick={() => togglePanel(3)}
-                        className={`${showPanel[3] ? "active" : " collapsed"}`}>
+                        className={`${showPanel[3] ? 'active' : ' collapsed'}`}>
                         <span className="acc-icons"></span> Redug lerset
                       </a>
                     </h4>
                   </div>
                   <div
-                    className={`panel-collapse ${showPanel[3] ? "in" : ""}`}
+                    className={`panel-collapse ${showPanel[3] ? 'in' : ''}`}
                     style={{
-                      maxHeight: showPanel[3] ? "500px" : "0px",
-                      overflow: "hidden",
-                      transition: "max-height 0.7s ease-out",
+                      maxHeight: showPanel[3] ? '500px' : '0px',
+                      overflow: 'hidden',
+                      transition: 'max-height 0.7s ease-out',
                     }}>
                     <div className="panel-body">
                       <p>
@@ -197,19 +197,19 @@ const AboutUs = () => {
             <div className="tab-menu">
               <ul className="nav nav-tabs" role="tablist">
                 <li
-                  className={`${navTabs[0] ? "active" : ""}`}
+                  className={`${navTabs[0] ? 'active' : ''}`}
                   onClick={() => toggleNavTabs(0)}>
                   <a href="#p-view-1">Buliding</a>
                 </li>
 
                 <li
-                  className={`${navTabs[1] ? "active" : ""}`}
+                  className={`${navTabs[1] ? 'active' : ''}`}
                   onClick={() => toggleNavTabs(1)}>
                   <a href="#p-view-2">Renovation</a>
                 </li>
 
                 <li
-                  className={`${navTabs[2] ? "active" : ""}`}
+                  className={`${navTabs[2] ? 'active' : ''}`}
                   onClick={() => toggleNavTabs(2)}>
                   <a>Isolation</a>
                 </li>
@@ -217,7 +217,7 @@ const AboutUs = () => {
             </div>
 
             <div className="tab-content">
-              <div className={`tab-pane ${navTabs[0] ? "active" : ""}`}>
+              <div className={`tab-pane ${navTabs[0] ? 'active' : ''}`}>
                 <div className="tab-inner">
                   <div className="event-content head-team">
                     <h5>Building</h5>
@@ -235,7 +235,7 @@ const AboutUs = () => {
                   </div>
                 </div>
               </div>
-              <div className={`tab-pane ${navTabs[1] ? "active" : ""}`}>
+              <div className={`tab-pane ${navTabs[1] ? 'active' : ''}`}>
                 <div className="tab-inner">
                   <div className="event-content head-team">
                     <h5>Renovation</h5>
@@ -252,7 +252,7 @@ const AboutUs = () => {
                   </div>
                 </div>
               </div>
-              <div className={`tab-pane ${navTabs[2] ? "active" : ""}`}>
+              <div className={`tab-pane ${navTabs[2] ? 'active' : ''}`}>
                 <div className="tab-inner">
                   <div className="event-content head-team">
                     <h5>Isolation</h5>

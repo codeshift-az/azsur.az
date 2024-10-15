@@ -97,7 +97,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   margin: 0 0 10px;
   color: #444;
   font-weight: 600;
@@ -161,7 +161,7 @@ div#preloader {
   width: 100%;
   height: 100%;
   overflow: visible;
-  background: #333 url("img/preloader.gif") no-repeat center center;
+  background: #333 url('img/preloader.gif') no-repeat center center;
 }
 
 .clear {
@@ -171,7 +171,7 @@ div#preloader {
 body {
   background: #fff none repeat scroll 0 0;
   color: #444;
-  font-family: "Lato", sans-serif;
+  font-family: 'Lato', sans-serif;
   font-size: 14px;
   text-align: left;
   overflow-x: hidden;
@@ -441,7 +441,7 @@ header {
 
 .mean-container .mean-bar::after {
   color: #ffffff;
-  content: "";
+  content: '';
   font-size: 21px;
   left: 5%;
   position: absolute;
@@ -597,7 +597,7 @@ header {
 .section-headline h3::before {
   background: #333 none repeat scroll 0 0;
   bottom: 0;
-  content: "";
+  content: '';
   height: 1px;
   left: 0;
   position: absolute;
@@ -606,7 +606,7 @@ header {
 .section-headline h3::after {
   background: #fbb700 none repeat scroll 0 0;
   bottom: -1px;
-  content: "";
+  content: '';
   height: 4px;
   left: 0;
   position: absolute;
@@ -653,7 +653,7 @@ header {
 }
 .awesome-img > a::after {
   background: rgba(0, 0, 0, 0.7) none repeat scroll 0 0;
-  content: "";
+  content: '';
   height: 100%;
   left: 0;
   position: absolute;
@@ -758,7 +758,7 @@ header {
 .about-details a span.acc-icons::before {
   background: #fbb700 none repeat scroll 0 0;
   color: #fff;
-  content: "";
+  content: '';
   font-family: fontawesome;
   font-size: 24px;
   height: 41px;
@@ -773,7 +773,7 @@ header {
 .about-details a.active span.acc-icons::before {
   background: #333 none repeat scroll 0 0;
   color: #fff;
-  content: "";
+  content: '';
   font-family: fontawesome;
   font-size: 24px;
   height: 42px;
@@ -865,7 +865,7 @@ tab-menu {
   background: rgba(242, 165, 0, 0.9) none repeat scroll 0 0;
   bottom: 0;
   color: #fff;
-  content: "";
+  content: '';
   font-size: 20px;
   font-weight: 700;
   height: 0%;
@@ -889,7 +889,7 @@ tab-menu {
 }
 
 .reviews-area {
-  background: url("img/background/back1.jpg") no-repeat scroll center top;
+  background: url('img/background/back1.jpg') no-repeat scroll center top;
   background-attachment: fixed;
   background-size: cover;
 }
@@ -1076,7 +1076,7 @@ tab-menu {
 }
 
 .single-blog a.blog-btn::after {
-  content: "";
+  content: '';
   font-family: fontawesome;
   opacity: 0;
   position: absolute;
@@ -1249,7 +1249,7 @@ tab-menu {
 }
 
 .reviews-2-area {
-  background: rgba(0, 0, 0, 0) url("img/background/back1.jpg") no-repeat fixed
+  background: rgba(0, 0, 0, 0) url('img/background/back1.jpg') no-repeat fixed
     center top / cover;
   position: relative;
   overflow: hidden;
@@ -1342,7 +1342,7 @@ tab-menu {
 }
 
 .service-area-3 {
-  background: rgba(0, 0, 0, 0) url("img/background/back2.jpg") no-repeat fixed
+  background: rgba(0, 0, 0, 0) url('img/background/back2.jpg') no-repeat fixed
     center top / cover;
 }
 
@@ -1375,7 +1375,7 @@ tab-menu {
 .section-headline-3 h3::before {
   background: #333 none repeat scroll 0 0;
   bottom: 0;
-  content: "";
+  content: '';
   height: 1px;
   left: 0;
   position: absolute;
@@ -1387,7 +1387,7 @@ tab-menu {
 .section-headline-3 h3::after {
   background: #fbb700 none repeat scroll 0 0;
   bottom: -1px;
-  content: "";
+  content: '';
   height: 4px;
   left: 0;
   position: absolute;
@@ -1515,7 +1515,9 @@ tab-menu {
 /*  15.Home page 6 Area
 /*--------------------------------*/
 .well-6:hover {
-  box-shadow: 3px 3px 6px #fbb700, -3px -3px 6px #fbb700;
+  box-shadow:
+    3px 3px 6px #fbb700,
+    -3px -3px 6px #fbb700;
 }
 
 .well-6 {
@@ -1524,7 +1526,7 @@ tab-menu {
 }
 
 .fun-fact-area {
-  background: rgba(0, 0, 0, 0) url("img/background/back1.jpg") repeat scroll 0 0;
+  background: rgba(0, 0, 0, 0) url('img/background/back1.jpg') repeat scroll 0 0;
   background-repeat: no-repeat;
   background-position: top center;
   background-size: cover;
@@ -1709,7 +1711,7 @@ tab-menu {
 }
 
 .left-menu ul li a::after {
-  content: "";
+  content: '';
   font-family: fontawesome;
   font-size: 18px;
   position: absolute;
@@ -1781,7 +1783,7 @@ tab-menu {
 }
 
 .single-page a.page-btn::after {
-  content: "";
+  content: '';
   font-family: fontawesome;
   opacity: 0;
   position: absolute;
@@ -1930,7 +1932,7 @@ tab-menu {
 .skill .progress-bar > span:before,
 .skill .progress-bar > span:after {
   border: medium solid transparent;
-  content: " ";
+  content: ' ';
   height: 0;
   pointer-events: none;
   position: absolute;
@@ -2248,7 +2250,7 @@ h3.comment-reply-title {
   background: #fff none repeat scroll 0 0;
   border-bottom: 1px solid #ccc;
   border-left: 1px solid #ccc;
-  content: "";
+  content: '';
   display: block;
   height: 10px;
   left: -5px;
@@ -2315,8 +2317,8 @@ span.email-notes {
   margin-bottom: 5px;
 }
 
-.comment-respond input[type="text"],
-.comment-respond input[type="email"] {
+.comment-respond input[type='text'],
+.comment-respond input[type='email'] {
   border: 1px solid #e5e5e5;
   border-radius: 0;
   height: 32px;
@@ -2334,7 +2336,7 @@ span.email-notes {
   width: 100%;
 }
 
-.comment-respond input[type="submit"] {
+.comment-respond input[type='submit'] {
   background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
   border: 1px solid #fbb700;
   border-radius: 0;
@@ -2361,7 +2363,7 @@ span.email-notes {
   color: #fbb700;
 }
 
-.comment-respond input[type="submit"]:hover {
+.comment-respond input[type='submit']:hover {
   border: 1px solid #fbb700;
   color: #fff;
   background: #fbb700;
@@ -2408,7 +2410,7 @@ span.email-notes {
 }
 
 .contact-info h3:before {
-  content: "\f007";
+  content: '\f007';
   display: inline-block;
   font-family: FontAwesome;
   margin-right: 5px;
@@ -2444,8 +2446,8 @@ span.email-notes {
   margin-bottom: 30px;
 }
 
-.contact-form input[type="text"],
-.contact-form input[type="email"] {
+.contact-form input[type='text'],
+.contact-form input[type='email'] {
   border: 1px solid #ccc;
   border-radius: 0;
   height: 40px;
@@ -2462,7 +2464,7 @@ span.email-notes {
   width: 100%;
 }
 
-.contact-form input[type="submit"] {
+.contact-form input[type='submit'] {
   background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
   border: 1px solid #444;
   border-radius: 0;
@@ -2475,7 +2477,7 @@ span.email-notes {
   transition: all 0.3s ease 0s;
 }
 
-.contact-form input[type="submit"]:hover {
+.contact-form input[type='submit']:hover {
   color: #fff;
   border: 1px solid #fbb700;
   background: #fbb700;
@@ -2545,12 +2547,12 @@ span.email-notes {
 .yarl__container {
   background-color: #000000d9 !important;
 }
-.yarl__root.yarl__relative{
-max-width: unset !important;
-margin: 0 !important;
+.yarl__root.yarl__relative {
+  max-width: unset !important;
+  margin: 0 !important;
 }
 
-.yarl__slide_image.yarl__slide_image_cover{
+.yarl__slide_image.yarl__slide_image_cover {
   max-width: unset !important;
   max-height: unset !important;
 }

@@ -1,7 +1,7 @@
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 // Constants
-import { CONTACT_DETAILS } from "@/constants";
+import { CONTACT_DETAILS } from '@/constants';
 
 const TopBar = () => {
   return (

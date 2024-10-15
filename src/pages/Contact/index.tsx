@@ -1,14 +1,14 @@
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
+
+import Breadcrumb from '@/components/Breadcrumb';
+// Components
+import Layout from '@/components/Layout';
 
 // Constants
-import { CONTACT_DETAILS } from "@/constants";
-
-// Components
-import Layout from "@/components/Layout";
-import Breadcrumb from "@/components/Breadcrumb";
+import { CONTACT_DETAILS } from '@/constants';
 
 // Related Components
-import ContactForm from "./components/ContactForm";
+import ContactForm from './components/ContactForm';
 
 const Contact = () => {
   return (
@@ -22,7 +22,7 @@ const Contact = () => {
               <div className="map-area border border-danger">
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d24314.413278621483!2d49.8434048!3d40.3800064!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40307da7a06b402f%3A0xd8897cf79ec36111!2zMjggQWzEscWfdmVyacWfIE1lcmtlemk!5e0!3m2!1str!2saz!4v1727339108958!5m2!1str!2saz"
-                  width={"100%"}
+                  width={'100%'}
                   height={450}
                   style={{ border: 0 }}
                   allowFullScreen

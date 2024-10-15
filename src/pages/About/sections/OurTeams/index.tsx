@@ -1,36 +1,35 @@
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
-// Assets
 import {
   OurTeamsImg,
   OurTeamsImg2,
   OurTeamsImg3,
   OurTeamsImg4,
-} from "@/assets/images";
+} from '@/assets/images';
 
 const OurTeams = () => {
   const memberData = [
     {
-      name: " Susan Bolt",
-      position: "Cheif member",
+      name: ' Susan Bolt',
+      position: 'Cheif member',
       img: OurTeamsImg,
       id: 1,
     },
     {
-      name: " Susan Bolt",
-      position: "Cheif member",
+      name: ' Susan Bolt',
+      position: 'Cheif member',
       img: OurTeamsImg2,
       id: 2,
     },
     {
-      name: " Susan Bolt",
-      position: "Cheif member",
+      name: ' Susan Bolt',
+      position: 'Cheif member',
       img: OurTeamsImg3,
       id: 3,
     },
     {
-      name: " Susan Bolt",
-      position: "Cheif member",
+      name: ' Susan Bolt',
+      position: 'Cheif member',
       img: OurTeamsImg4,
       id: 4,
     },

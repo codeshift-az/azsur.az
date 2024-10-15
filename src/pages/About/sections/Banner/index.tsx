@@ -1,5 +1,5 @@
 // Assets
-import { AboutBannerImg } from "@/assets/images";
+import { AboutBannerImg } from '@/assets/images';
 
 const Banner = () => {
   return (

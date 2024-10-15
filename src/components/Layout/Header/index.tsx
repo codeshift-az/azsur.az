@@ -1,23 +1,23 @@
-import { useEffect, useRef } from "react";
-import { Link } from "react-router-dom";
+import { useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
 
 // Assets
-import { LOGO } from "@/assets/images";
+import { LOGO } from '@/assets/images';
 
+import Menu from './Menu';
 // Related components
-import MobileMenu from "./MobileMenu";
-import Menu from "./Menu";
+import MobileMenu from './MobileMenu';
 
 const Header = () => {
   const headerRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
-    window.addEventListener("scroll", () => {
+    window.addEventListener('scroll', () => {
       if (headerRef.current) {
         if (window.scrollY > 160) {
-          headerRef.current.classList.add("headeropacityeffect");
+          headerRef.current.classList.add('headeropacityeffect');
         } else {
-          headerRef.current.classList.remove("headeropacityeffect");
+          headerRef.current.classList.remove('headeropacityeffect');
         }
       }
     });

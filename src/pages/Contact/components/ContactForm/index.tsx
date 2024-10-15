@@ -20,7 +20,7 @@ const ContactForm = () => {
                 cols={30}
                 rows={10}
                 placeholder="Message"
-                defaultValue={""}
+                defaultValue={''}
               />
               <input type="submit" defaultValue="Submit Form" />
             </div>

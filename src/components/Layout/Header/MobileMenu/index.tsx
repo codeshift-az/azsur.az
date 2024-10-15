@@ -1,11 +1,11 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 // Assets
-import { LOGO } from "@/assets/images";
+import { LOGO } from '@/assets/images';
 
 // Related components
-import Menu from "../Menu";
+import Menu from '../Menu';
 
 const MobileMenu = () => {
   const [navOpen, setNavOpen] = useState<boolean>(false);
@@ -27,8 +27,8 @@ const MobileMenu = () => {
       <div
         className={`mobile-dropdown-menu" ${
           navOpen
-            ? "mobile-dropdown-menu-active"
-            : "mobile-dropdown-menu-inactive"
+            ? 'mobile-dropdown-menu-active'
+            : 'mobile-dropdown-menu-inactive'
         } bg-dark`}>
         <div className="dropdown-nav-box ">
           <Menu />

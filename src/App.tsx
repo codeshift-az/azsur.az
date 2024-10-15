@@ -1,46 +1,37 @@
-import React from "react";
+import React from 'react';
+import { Route, Routes } from 'react-router-dom';
 
-// React Router
-import { Routes, Route } from "react-router-dom";
+import '@/assets/css/style.css';
 
-// i18n
-import { useTranslation } from "react-i18next";
-
-// Routes
-import { publicRoutes } from "@/routes";
-
-// Middlewares
-import { LanguageMiddleware } from "@/routes/middlewares";
+import i18n from '@/i18n';
+import { publicRoutes } from '@/routes';
+import { LanguageMiddleware } from '@/routes/middlewares';
 
 const App = () => {
-  const { i18n } = useTranslation();
-
-  const supportedLngs = i18n.options.supportedLngs || ["en"];
+  const supportedLngs = i18n.options.supportedLngs || [
+    i18n.options.fallbackLng,
+  ];
 
   return (
-    <React.Fragment>
-      <Routes>
-        {publicRoutes.map((route, index) => (
-          <React.Fragment key={index}>
+    <Routes>
+      {publicRoutes.map((route, index) => (
+        <React.Fragment key={index}>
+          <Route
+            path={route.path}
+            element={<LanguageMiddleware>{route.component}</LanguageMiddleware>}
+          />
+          {supportedLngs.map((lng) => (
             <Route
-              path={route.path}
+              key={`${index}-${lng}`}
+              path={`/${lng}/${route.path.replace('/', '')}`}
               element={
                 <LanguageMiddleware>{route.component}</LanguageMiddleware>
               }
             />
-            {supportedLngs.map((lng) => (
-              <Route
-                key={`${index}-${lng}`}
-                path={`/${lng}/${route.path.replace("/", "")}`}
-                element={
-                  <LanguageMiddleware>{route.component}</LanguageMiddleware>
-                }
-              />
-            ))}
-          </React.Fragment>
-        ))}
-      </Routes>
-    </React.Fragment>
+          ))}
+        </React.Fragment>
+      ))}
+    </Routes>
   );
 };
 

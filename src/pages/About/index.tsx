@@ -1,15 +1,12 @@
-import * as Sections from "./sections";
+import Breadcrumb from '@/components/Breadcrumb';
+import Layout from '@/components/Layout';
+import Subscribe from '@/components/Subscribe';
 
-// Components
-import Breadcrumb from "@/components/Breadcrumb";
-import Layout from "@/components/Layout";
-
-// Sections
-import Banner from "./sections/Banner";
-import AboutUs from "./sections/AboutUs";
-import OurTeams from "./sections/OurTeams";
-import OurSkill from "./sections/OurSkill";
-import Subscribe from "@/components/Subscribe";
+import * as Sections from './sections';
+import AboutUs from './sections/AboutUs';
+import Banner from './sections/Banner';
+import OurSkill from './sections/OurSkill';
+import OurTeams from './sections/OurTeams';
 
 const About = () => {
   return (
