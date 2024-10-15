@@ -16,6 +16,12 @@ export { default as ProjectImg7 } from "./projects/port8.jpg";
 // Projects Details
 export { default as ProjectDetailImg } from "./projects/details/cons.jpg";
 
+//Service Details
+export {default as ServiceDetailImg} from "./services/details/green-building.jpg";
+export {default as ServiceDetailImg1} from "./services/details/green-building1.jpg";
+export {default as ServiceDetailImg2} from "./services/details/green-building2.jpg";
+export {default as ServiceDetailImg3} from "./services/details/green-building3.jpg";
+
 // About Page 
 
 // Banner 
@@ -29,3 +35,9 @@ export {default as OurTeamsImg} from "./about/sections/ourTeams/person1.jpg";
 export {default as OurTeamsImg2} from "./about/sections/ourTeams/person2.jpg";
 export {default as OurTeamsImg3} from "./about/sections/ourTeams/person3.jpg";
 export {default as OurTeamsImg4} from "./about/sections/ourTeams/person4.jpg";
+
+// Sservices
+export {default as ServicesImg} from "./services/1.jpg";
+export {default as ServicesImg2} from "./services/2.jpg";
+export {default as ServicesImg3} from "./services/3.jpg";
+export {default as ServicesImg4} from "./services/4.jpg";

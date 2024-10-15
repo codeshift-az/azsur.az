@@ -13,8 +13,14 @@ export const publicRoutes = [
   // Projects Details
   { path: "/projects/:slug", component: <Pages.ProjectsDetails /> },
 
+  // Service Details
+  { path: "/services/service:slug", component: <Pages.ServiceDetails /> },
+
   // About
   { path: "/about", component: <Pages.About /> },
+
+  // Services
+  { path: "/services", component: <Pages.Services /> },
 
   // Not Found
   { path: "*", component: <Pages.NotFound /> },
