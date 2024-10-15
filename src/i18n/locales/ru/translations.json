@@ -3,6 +3,9 @@
     "home": {
       "title": "Домашняя страница"
     },
+    "serviceDetails": {
+      "related_projects": "Связанные проекты"
+    },
     "notFound": {
       "title": "Страница не найдена",
       "message": "Запрашиваемая страница не найдена."

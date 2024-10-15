@@ -22,8 +22,8 @@ const LanguageMiddleware = ({ children }: Props) => {
     }
 
     if (pathLang !== i18n.language) {
-      i18n.changeLanguage(pathLang);
       localStorage.setItem('LANG', pathLang);
+      i18n.changeLanguage(pathLang);
     }
   }, [pathname, i18n, navigate]);
 

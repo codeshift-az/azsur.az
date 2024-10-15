@@ -3,6 +3,9 @@
     "home": {
       "title": "Ana səhifə"
     },
+    "serviceDetails": {
+      "related_projects": "Əlaqəli layihələr"
+    },
     "notFound": {
       "title": "Səhifə tapılmadı",
       "message": "Axtardığınız səhifə tapılmadı."

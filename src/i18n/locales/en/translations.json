@@ -3,6 +3,9 @@
     "home": {
       "title": "Home page"
     },
+    "serviceDetails": {
+      "related_projects": "Related projects"
+    },
     "notFound": {
       "title": "Page not found",
       "message": "The page you are looking for was not found."
