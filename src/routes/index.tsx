@@ -10,6 +10,9 @@ export const publicRoutes = [
   // Projects
   { path: "/projects", component: <Pages.Projects /> },
 
+  // Projects Details
+  { path: "/projects/:slug", component: <Pages.ProjectsDetails /> },
+
   // Service Details
   { path: "/services/service:slug", component: <Pages.ServiceDetails /> },
 
