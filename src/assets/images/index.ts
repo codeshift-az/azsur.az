@@ -13,6 +13,15 @@ export { default as ProjectImg5 } from "./projects/port5.jpg";
 export { default as ProjectImg6 } from "./projects/port6.jpg";
 export { default as ProjectImg7 } from "./projects/port8.jpg";
 
+// Projects Details
+export { default as ProjectDetailImg } from "./projects/details/cons.jpg";
+
+//Service Details
+export {default as ServiceDetailImg} from "./services/details/green-building.jpg";
+export {default as ServiceDetailImg1} from "./services/details/green-building1.jpg";
+export {default as ServiceDetailImg2} from "./services/details/green-building2.jpg";
+export {default as ServiceDetailImg3} from "./services/details/green-building3.jpg";
+
 // About Page 
 
 // Banner 
