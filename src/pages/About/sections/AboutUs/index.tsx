@@ -1,7 +1,6 @@
 import { useState } from 'react';
 
-// Assets
-import { AboutUsImg } from '@/assets/images';
+import { useTranslation } from 'react-i18next';
 
 const AboutUs = () => {
   const [showPanel, setShowPanel] = useState<boolean[]>([
@@ -12,6 +11,8 @@ const AboutUs = () => {
   ]);
 
   const [navTabs, setNavTabs] = useState<boolean[]>([true, false, false]);
+
+  const { t } = useTranslation('pages', { keyPrefix: 'home' });
 
   const togglePanel = (index: number) => {
     setShowPanel((prev) => prev.map((item, i) => (index == i ? !item : false)));
@@ -27,7 +28,7 @@ const AboutUs = () => {
         <div className="row">
           <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <div className="section-headline text-left">
-              <h3>about us</h3>
+              <h3>{t('aboutUs.title')}</h3>
             </div>
           </div>
         </div>
@@ -36,7 +37,7 @@ const AboutUs = () => {
           <div className="col-lg-6 col-md-6 col-sm-12 col-xs-12">
             <div className="about-dec">
               <div className="about-img">
-                <img src={AboutUsImg} alt="" />
+                <img src="https://placehold.co/555x361/webp" alt="" />
               </div>
             </div>
           </div>

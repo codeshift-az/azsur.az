@@ -1,16 +1,17 @@
 import { Link } from 'react-router-dom';
 
+import { useTranslation } from 'react-i18next';
+
 import Breadcrumb from '@/components/Breadcrumb';
-// Components
 import Layout from '@/components/Layout';
 
-// Constants
 import { CONTACT_DETAILS } from '@/constants';
 
-// Related Components
 import ContactForm from './components/ContactForm';
 
 const Contact = () => {
+  const { t } = useTranslation('pages', { keyPrefix: 'contact' });
+
   return (
     <Layout>
       <Breadcrumb heading="Contact" pageName="contact-us2" />
@@ -30,16 +31,14 @@ const Contact = () => {
                   referrerPolicy="no-referrer-when-downgrade"
                 />
               </div>
-              {/* End Map area */}
             </div>
           </div>
-          {/* Contact Information */}
           <div className="row">
             <div className="col-lg-4 col-md-4 col-sm-5 col-xs-12">
               <div className="single-page-head">
                 <div className="left-contact">
                   <Link to="#">
-                    <h4 className="sec-head">Contact Information</h4>
+                    <h4 className="sec-head">{t('title')}</h4>
                   </Link>
                   <div className="left-cont-info">
                     <ul>
@@ -65,19 +64,19 @@ const Contact = () => {
                   <div className="footer-icons left-side-icons">
                     <ul>
                       <li>
-                        <a href={CONTACT_DETAILS.facebook}>
+                        <Link to={CONTACT_DETAILS.facebook}>
                           <i className="fa fa-facebook" />
-                        </a>
+                        </Link>
                       </li>
                       <li>
-                        <a href={CONTACT_DETAILS.instagram}>
+                        <Link to={CONTACT_DETAILS.instagram}>
                           <i className="fa fa-instagram" />
-                        </a>
+                        </Link>
                       </li>
                       <li>
-                        <a href={CONTACT_DETAILS.youtube}>
+                        <Link to={CONTACT_DETAILS.youtube}>
                           <i className="fa fa-youtube" />
-                        </a>
+                        </Link>
                       </li>
                     </ul>
                   </div>
@@ -85,7 +84,6 @@ const Contact = () => {
               </div>
             </div>
 
-            {/* Contact Form */}
             <ContactForm />
           </div>
         </div>

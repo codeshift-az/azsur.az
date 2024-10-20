@@ -1,10 +1,49 @@
 {
   "pages": {
+    "header": {
+      "nav1": "Home",
+      "nav2": "Projects",
+      "nav3": "Services",
+      "nav4": "Certificates",
+      "nav5": "About",
+      "nav6": "Contact"
+    },
     "home": {
-      "title": "Home page"
+      "title": "Home page",
+      "common": {
+        "buttons": {
+          "ourService": "Our Service",
+          "getQuate": "Get a quate",
+          "contactButton": "Contact Here"
+        }
+      },
+      "banner": {
+        "title": "Wellcome to our company",
+        "title2": "Professional Constructions"
+      },
+      "subscribe": "Wellcome to our Royalsteel construction company",
+      "ourLatestProject": "Our-latest projects",
+      "aboutUs": {
+        "title": "About Us"
+      }
+    },
+    "about": {
+      "ourTeams": "Our teams",
+      "ourSkill": "Our skill"
+    },
+    "contact": {
+      "title": "Contact information",
+      "form": {
+        "name": "Name (required)",
+        "email": "Email (required)",
+        "subject": "Subjects",
+        "message": "Message",
+        "button": "Submit"
+      }
     },
     "serviceDetails": {
-      "related_projects": "Related projects"
+      "related_projects": "Related projects",
+      "related_projects_log": "No related projects."
     },
     "notFound": {
       "title": "Page not found",

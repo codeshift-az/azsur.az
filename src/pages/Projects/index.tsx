@@ -1,176 +1,76 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-// Light Box
+import { useTranslation } from 'react-i18next';
+
+import useSWR from 'swr';
 import Lightbox from 'yet-another-react-lightbox';
 import 'yet-another-react-lightbox/styles.css';
 
-// Assets
-import {
-  ProjectImg1,
-  ProjectImg2,
-  ProjectImg3,
-  ProjectImg4,
-  ProjectImg5,
-  ProjectImg6,
-} from '@/assets/images';
-
-// Components
 import Breadcrumb from '@/components/Breadcrumb';
 import Layout from '@/components/Layout';
-import Subscribe from '@/components/Subscribe';
+
+import { getProjectList } from '@/api/project';
+
+import NotFound from '@/pages/NotFound';
 
 const Projects = () => {
+  const { t } = useTranslation('pages', { keyPrefix: 'home' });
+
+  const {
+    data: AllProjects,
+    isLoading,
+    error,
+  } = useSWR('projects', () => getProjectList());
   const [open, setOpen] = useState(false);
   const [currentSlides, setCurrentSlides] = useState<{ src: string }[]>([]);
 
-  const [filterKey, setFilterKey] = useState('all');
-
-  const projects = [
-    {
-      id: 1,
-      title: 'Apartment',
-      category: ['isolation', 'electricity'],
-      img: ProjectImg1,
-      images: [ProjectImg1, ProjectImg2, ProjectImg3],
-    },
-    {
-      id: 2,
-      title: 'Apartment',
-      category: ['isolation', 'building'],
-      img: ProjectImg2,
-      images: [ProjectImg2, ProjectImg4],
-    },
-    {
-      id: 3,
-      title: 'Apartment',
-      category: ['building', 'renovate'],
-      img: ProjectImg3,
-      images: [ProjectImg3, ProjectImg5, ProjectImg6],
-    },
-    {
-      id: 4,
-      title: 'Apartment',
-      category: ['electricity', 'renovate'],
-      img: ProjectImg4,
-      images: [ProjectImg4],
-    },
-    {
-      id: 5,
-      title: 'Apartment',
-      category: ['building', 'electricity'],
-      img: ProjectImg5,
-      images: [ProjectImg5, ProjectImg1],
-    },
-    {
-      id: 6,
-      title: 'Apartment',
-      category: ['isolation', 'renovate'],
-      img: ProjectImg6,
-      images: [ProjectImg6],
-    },
-  ];
-
-  const filteredProjects =
-    filterKey === 'all'
-      ? projects
-      : projects.filter((project) => project.category.includes(filterKey));
-
-  const openLightbox = (images: string[]) => {
-    setCurrentSlides(images.map((src) => ({ src })));
+  const openLightbox = (images) => {
+    setCurrentSlides(images.map((src) => ({ src: src.image })));
     setOpen(true);
   };
+  if (isLoading || !AllProjects) return <div id="preloader"></div>;
+
+  if (error && error.status === 404) return <NotFound />;
   return (
     <Layout>
       <Breadcrumb heading="Our Project" pageName="Our Project" />
-      <div className="portfolio-area area-padding fix">
+      <div className="project-area area-padding">
         <div className="container">
           <div className="row">
             <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
               <div className="section-headline-3 text-center">
-                <h3>Our Latest Projects</h3>
+                <h3>{t('ourLatestProject')}</h3>
               </div>
             </div>
           </div>
-          <div className="row ">
-            <div className="awesome-project-1 fix">
-              <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <div className="awesome-menu">
-                  <ul className="project-menu">
-                    <li>
-                      <a
-                        href="#"
-                        className={filterKey === 'all' ? 'active' : ''}
-                        onClick={() => setFilterKey('all')}>
-                        All
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        className={filterKey === 'building' ? 'active' : ''}
-                        onClick={() => setFilterKey('building')}>
-                        Building
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        className={filterKey === 'isolation' ? 'active' : ''}
-                        onClick={() => setFilterKey('isolation')}>
-                        Isolation
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        className={filterKey === 'electricity' ? 'active' : ''}
-                        onClick={() => setFilterKey('electricity')}>
-                        Electricity
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        className={filterKey === 'renovate' ? 'active' : ''}
-                        onClick={() => setFilterKey('renovate')}>
-                        Renovate
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div
-              className="awesome-project-content portfolio-2 row"
-              style={{ position: 'relative' }}>
-              {filteredProjects.map((project) => (
-                <div
-                  key={project.id}
-                  className={` single-awesome-project ${project.category.join(
-                    ' '
-                  )} col`}>
+          <div className="row">
+            {AllProjects?.map((item, index) => (
+              <div className="col-lg-4 col-md-4 col-sm-6 col-xs-12" key={index}>
+                <div className="single-awesome-project first-item">
                   <div className="awesome-img">
-                    <Link to="/projects/:slug">
-                      <img src={project.img} alt={project.title} />
+                    <Link to={`/projects/${item.slug}`}>
+                      <img src={item.images[0].image} alt="" />
                     </Link>
                     <div className="add-actions">
                       <div className="project-dec">
                         <h5>
-                          <a href="#">{project.title}</a>
+                          <Link to={`/projects/${item.slug}`}>
+                            {item.title}
+                          </Link>
                         </h5>
-                        <span>{project.category.join(', ')}</span>
+                        <span>building</span>
                       </div>
                       <ul className="project-action-btn">
                         <li>
                           <a className="vbox-overlay ">
                             <i
                               className="fa fa-search-plus"
-                              onClick={() => openLightbox(project.images)}></i>
+                              onClick={() => openLightbox(item.images)}></i>
                           </a>
                         </li>
                         <li>
-                          <Link to="/projects/:slug">
+                          <Link to={`/projects/${item.slug}`}>
                             <i className="fa fa-link"></i>
                           </Link>
                         </li>
@@ -178,18 +78,17 @@ const Projects = () => {
                     </div>
                   </div>
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
           </div>
         </div>
-      </div>
 
-      <Lightbox
-        open={open}
-        close={() => setOpen(false)}
-        slides={currentSlides}
-      />
-      <Subscribe />
+        <Lightbox
+          open={open}
+          close={() => setOpen(false)}
+          slides={currentSlides}
+        />
+      </div>
     </Layout>
   );
 };

@@ -1,10 +1,49 @@
 {
   "pages": {
+    "header": {
+      "nav1": "Ev",
+      "nav2": "Layihələr",
+      "nav3": "Xidmətlər",
+      "nav4": "Sertifikatlar",
+      "nav5": "Haqqında",
+      "nav6": "Əlaqə"
+    },
     "home": {
-      "title": "Ana səhifə"
+      "title": "Ana səhifə",
+      "common": {
+        "buttons": {
+          "ourService": "Xidmətimiz",
+          "getQuate": "Sitat əldə edin",
+          "contactButton": "Burada əlaqə saxlayın"
+        }
+      },
+      "banner": {
+        "title": "Şirkətimizə xoş gəlmisiniz",
+        "title2": "Peşəkar konstruksiyalar"
+      },
+      "subscribe": "Royalsteel construction şirkətimizə xoş gəlmisiniz ",
+      "ourLatestProject": "Ən son layihələrimiz",
+      "aboutUs": {
+        "title": "Haqqımızda"
+      }
+    },
+    "about": {
+      "ourTeams": "Komandalarımız",
+      "ourSkill": "Bizim bacarığımız"
+    },
+    "contact": {
+      "title": "Əlaqə məlumatı",
+      "form": {
+        "name": "Ad (tələb olunur)",
+        "email": "Email (tələb olunur)",
+        "subject": "Mövzu",
+        "message": "Mesaj",
+        "button": "Təqdim et"
+      }
     },
     "serviceDetails": {
-      "related_projects": "Əlaqəli layihələr"
+      "related_projects": "Əlaqəli layihələr",
+      "related_projects_log": "Əlaqəli layihə yoxdur."
     },
     "notFound": {
       "title": "Səhifə tapılmadı",
