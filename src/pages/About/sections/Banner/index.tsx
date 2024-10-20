@@ -1,6 +1,3 @@
-// Assets
-import { AboutBannerImg } from '@/assets/images';
-
 const Banner = () => {
   return (
     <div className="about-area area-padding">
@@ -14,7 +11,7 @@ const Banner = () => {
             </div>
             <div className="col-lg-6 col-md-6">
               <div className="about-pic">
-                <img src={AboutBannerImg} alt="our image" />
+                <img src="https://placehold.co/555x275/webp" alt="our image" />
               </div>
             </div>
           </div>

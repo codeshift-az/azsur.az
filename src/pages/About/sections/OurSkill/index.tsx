@@ -1,14 +1,17 @@
-// Component
+import { useTranslation } from 'react-i18next';
+
 import ProgressBar from './component/progressBar';
 
 const OurSkill = () => {
+  const { t } = useTranslation('pages', { keyPrefix: 'about' });
+
   return (
     <div className="about-skills-area area-padding">
       <div className="container">
         <div className="row">
           <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <div className="section-headline-3 text-center ">
-              <h3>Our skill</h3>
+              <h3>{t('ourSkill')}</h3>
             </div>
           </div>
         </div>

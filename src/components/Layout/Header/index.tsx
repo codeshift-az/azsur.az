@@ -1,11 +1,9 @@
 import { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 
-// Assets
 import { LOGO } from '@/assets/images';
 
 import Menu from './Menu';
-// Related components
 import MobileMenu from './MobileMenu';
 
 const Header = () => {
@@ -28,7 +26,6 @@ const Header = () => {
       <div id="sticker" className="header-area">
         <div className="container">
           <div className="row">
-            {/* Logo */}
             <div className="col-md-3 col-lg-3 col-sm-3 hidden-xs">
               <div className="logo">
                 <Link to="/">
