@@ -8,18 +8,17 @@ import 'swiper/css/pagination';
 import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
-export default function BrandCarousel() {
-  const logos = [
-    { img: 'https://placehold.co/163x100/webp' },
-    { img: 'https://placehold.co/163x100/webp' },
-    { img: 'https://placehold.co/163x100/webp' },
-    { img: 'https://placehold.co/163x100/webp' },
-    { img: 'https://placehold.co/163x100/webp' },
-    { img: 'https://placehold.co/163x100/webp' },
-    { img: 'https://placehold.co/163x100/webp' },
-    { img: 'https://placehold.co/163x100/webp' },
-  ];
-
+const slides = [
+  { img: 'https://placehold.co/163x100/webp' },
+  { img: 'https://placehold.co/163x100/webp' },
+  { img: 'https://placehold.co/163x100/webp' },
+  { img: 'https://placehold.co/163x100/webp' },
+  { img: 'https://placehold.co/163x100/webp' },
+  { img: 'https://placehold.co/163x100/webp' },
+  { img: 'https://placehold.co/163x100/webp' },
+  { img: 'https://placehold.co/163x100/webp' },
+];
+const BrandCarousel = () => {
   return (
     <div className="brand-area area-padding">
       <div className="container">
@@ -37,12 +36,12 @@ export default function BrandCarousel() {
                   disableOnInteraction: false,
                 }}
                 speed={800}
-                slidesPerView={logos.length}
+                slidesPerView={slides.length}
                 loop={true}
                 navigation={true}
                 modules={[Pagination, Navigation, Autoplay]}
                 className="mySwiper">
-                {logos.map((logo, index) => (
+                {slides.map((logo, index) => (
                   <SwiperSlide key={index}>
                     <div className="single-brand-item">
                       <Link to="#">
@@ -58,4 +57,5 @@ export default function BrandCarousel() {
       </div>
     </div>
   );
-}
+};
+export default BrandCarousel;

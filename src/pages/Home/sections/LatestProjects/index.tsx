@@ -14,7 +14,7 @@ const LatestProjects = () => {
   const { t } = useTranslation('pages', { keyPrefix: 'home' });
 
   const {
-    data: AllProjects,
+    data: Projects,
     isLoading,
     error,
   } = useSWR('projects', () => getProjectList());
@@ -25,7 +25,8 @@ const LatestProjects = () => {
     setCurrentSlides(images.map((src) => ({ src: src.image })));
     setOpen(true);
   };
-  if (isLoading || !AllProjects) return <span>Loading...</span>;
+
+  if (isLoading || !Projects) return <div id="preloader"></div>;
 
   if (error && error.status === 404) return <NotFound />;
   return (
@@ -39,7 +40,7 @@ const LatestProjects = () => {
           </div>
         </div>
         <div className="row">
-          {AllProjects?.map((item, index) => (
+          {Projects.map((item, index) => (
             <div className="col-lg-4 col-md-4 col-sm-6 col-xs-12" key={index}>
               <div className="single-awesome-project first-item">
                 <div className="awesome-img">

@@ -11,12 +11,12 @@ import NotFound from '../NotFound';
 
 const Services = () => {
   const {
-    data: ServiceData,
+    data: service,
     isLoading,
     error,
   } = useSWR('service', () => getServiceList());
 
-  if (isLoading || !ServiceData) return <div id="preloader"></div>;
+  if (isLoading || !service) return <div id="preloader"></div>;
 
   if (error && error.status === 404) return <NotFound />;
 
@@ -26,7 +26,7 @@ const Services = () => {
       <div className="page-head area-padding">
         <div className="container">
           <div className="row">
-            {ServiceData?.map((item, index) => {
+            {service.map((item, index) => {
               return (
                 <div className="col-lg-4 col-md-6 col-sm-12" key={index}>
                   <div className="blog-post blog-1 ">

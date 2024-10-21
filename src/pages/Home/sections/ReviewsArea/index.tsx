@@ -6,22 +6,25 @@ import 'swiper/css/pagination';
 import { Navigation } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
-const ReviewCard = [
+const reviews = [
   {
     img: 'https://placehold.co/100x100/webp',
-    text: 'Redug Lagre dolor sit amet, consectetur adipisicing elit. Animi vero excepturi magnam ducimus adipisci voluptas, praesentium maxime necessitatibus  Lagre dolor sit amet, consectetur adipisicing elit. Animi vero excepturi magnam ducimus adipisci voluptas, praesentium maxime necessitatibus.',
+    description:
+      'Redug Lagre dolor sit amet, consectetur adipisicing elit. Animi vero excepturi magnam ducimus adipisci voluptas, praesentium maxime necessitatibus  Lagre dolor sit amet, consectetur adipisicing elit. Animi vero excepturi magnam ducimus adipisci voluptas, praesentium maxime necessitatibus.',
     name: 'Jhon Forder',
     title: 'Ceo - France Home',
   },
   {
     img: 'https://placehold.co/100x100/webp',
-    text: 'Redug Lagre dolor sit amet, consectetur adipisicing elit. Animi vero excepturi magnam ducimus adipisci voluptas, praesentium maxime necessitatibus.',
+    description:
+      'Redug Lagre dolor sit amet, consectetur adipisicing elit. Animi vero excepturi magnam ducimus adipisci voluptas, praesentium maxime necessitatibus.',
     name: 'Jhon Forder',
     title: 'Executive Officer - Smart Home',
   },
   {
     img: 'https://placehold.co/100x100/webp',
-    text: 'Redug Lagre dolor sit amet, consectetur adipisicing elit. Animi vero excepturi magnam ducimus adipisci voluptas, praesentium maxime necessitatibus.',
+    description:
+      'Redug Lagre dolor sit amet, consectetur adipisicing elit. Animi vero excepturi magnam ducimus adipisci voluptas, praesentium maxime necessitatibus.',
     name: 'Jhon Forder',
     title: 'Director - Builder',
   },
@@ -40,14 +43,14 @@ const Review = () => {
                 navigation={true}
                 modules={[Navigation]}
                 className="mySwiper testimonial-carousel item-indicator text-left">
-                {ReviewCard?.map((testi, index) => (
+                {reviews.map((testi, index) => (
                   <SwiperSlide key={index}>
                     <div className="single-testi">
                       <div className="testi-img">
                         <img src={testi.img} alt={testi.name} />
                       </div>
                       <div className="testi-text">
-                        <p>{testi.text}</p>
+                        <p>{testi.description}</p>
                         <h4>{testi.name}</h4>
                         <span className="guest-rev">{testi.title}</span>
                       </div>

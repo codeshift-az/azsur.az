@@ -1,7 +1,3 @@
-import { Link } from 'react-router-dom';
-
-import { useTranslation } from 'react-i18next';
-
 import { motion } from 'framer-motion';
 import 'swiper/css';
 import 'swiper/css/autoplay';
@@ -17,7 +13,6 @@ import { getSlide } from '@/api/slide';
 import NotFound from '@/pages/NotFound';
 
 const Banner = () => {
-  const { t } = useTranslation('pages', { keyPrefix: 'home' });
   const { data: Slides, isLoading, error } = useSWR('slides', () => getSlide());
   if (isLoading || !Slides) return <div id="preloader"></div>;
 
@@ -29,7 +24,7 @@ const Banner = () => {
         navigation={true}
         modules={[Pagination, Navigation]}
         className="mySwiper">
-        {Slides?.map((slide, index) => (
+        {Slides.map((slide, index) => (
           <SwiperSlide key={index}>
             <img src={slide.image} alt="" loading="lazy" />
             <div className="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
@@ -51,20 +46,7 @@ const Banner = () => {
                         initial={{ x: -300, opacity: 0 }}
                         animate={{ x: 0, opacity: 1 }}
                         transition={{ duration: 1.5, delay: 0.3 }}>
-                        <h1 className="title2">{slide.slug}</h1>
-                      </motion.div>
-
-                      <motion.div
-                        className="layer-1-3"
-                        initial={{ rotate: 45, y: 200, opacity: 0 }}
-                        animate={{ rotate: 0, y: 0, opacity: 1 }}
-                        transition={{ duration: 1.5, delay: 0.3 }}>
-                        <Link to="/services" className="ready-btn ready-btn2">
-                          {t('common.buttons.ourService')}
-                        </Link>
-                        <Link to="/contact" className="ready-btn">
-                          {t('common.buttons.getQuate')}
-                        </Link>
+                        <h1 className="title2">{slide.description}</h1>
                       </motion.div>
                     </div>
                   </div>

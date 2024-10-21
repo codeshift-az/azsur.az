@@ -16,7 +16,7 @@ const ProjectDetails = () => {
   const { pathname } = useLocation();
 
   const {
-    data: projectData,
+    data: project,
     isLoading,
     error,
   } = useSWR(['project', pathname], () =>
@@ -31,14 +31,14 @@ const ProjectDetails = () => {
   const updateIndex = ({ index: current }: { index: number }) =>
     setIndex(current);
 
-  const slides = projectData?.images.map((image) => ({ src: image?.image }));
+  const slides = project?.images.map((image) => ({ src: image?.image }));
 
-  if (isLoading || !projectData) return <div id="preloader"></div>;
+  if (isLoading || !project) return <div id="preloader"></div>;
 
   if (error && error.status === 404) return <NotFound />;
   return (
     <Layout>
-      <Breadcrumb heading={projectData?.slug} pageName={projectData?.title} />
+      <Breadcrumb heading={project.slug} pageName={project.title} />
       <div className="page-head area-padding">
         <div className="container">
           <div className="row">
@@ -69,11 +69,9 @@ const ProjectDetails = () => {
                   />
                 </div>
                 <div className="post-information">
-                  <h2>{projectData?.title}</h2>
+                  <h2>{project.title}</h2>
 
-                  <div className="entry-content">
-                    {projectData?.description}
-                  </div>
+                  <div className="entry-content">{project.description}</div>
                 </div>
               </article>
               <div className="clear"></div>

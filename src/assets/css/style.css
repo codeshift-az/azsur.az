@@ -2645,6 +2645,7 @@ span.email-notes {
 
 .slider-area img {
   width: 100%;
+  max-height: 706px;
 }
 
 .text-left .swiper-button-next:after {
@@ -2705,4 +2706,69 @@ span.email-notes {
 .brand-items .swiper-button-next:hover:after,
 .swiper-button-prev:hover:after {
   background: #fbb700;
+}
+.slider-area .mySwiper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider-area .swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 700px) {
+  .slider-area .title1 {
+    font-size: 12px !important;
+  }
+  .title2 {
+    font-size: 18px !important;
+    line-height: 1.2;
+  }
+  .Reviews-content {
+    padding: 50px 0px;
+  }
+  .single-member .team-img img {
+    width: 100%;
+  }
+  .suscribe-text h3 {
+    font-size: 16px !important;
+  }
+}
+.slider-content {
+  display: block !important;
+  visibility: visible !important;
+}
+
+.layer-1-1,
+.layer-1-2 {
+  display: block !important;
+  visibility: visible !important;
+}
+.slider-area .swiper-slide {
+  overflow: visible !important;
+  height: auto;
+}
+.slider-content,
+.layer-1-1,
+.layer-1-2 {
+  position: relative;
+  z-index: 10;
+}
+
+@media (max-width: 1024px) {
+  .suscribe-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .suscribe-area {
+    padding: 0px;
+  }
+  .sus-btn {
+    margin: 10px 0px;
+  }
 }

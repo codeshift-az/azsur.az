@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-const Data = [
+const services = [
   {
     id: 1,
     title: 'Project Start',
@@ -28,7 +28,7 @@ const ServiceArea = () => {
     <div className="service-area area-padding">
       <div className="container">
         <div className="row">
-          {Data?.map((item, index) => (
+          {services.map((item, index) => (
             <div className="col-lg-4 col-md-4 col-sm-6 col-xs-12" key={index}>
               <div className="well-left">
                 <div className="single-well">
