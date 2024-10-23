@@ -44,13 +44,13 @@ const ServiceDetails = () => {
   const slides = service?.images.map((image) => ({ src: image.image }));
 
   if (projectsIsLoading || isLoading || !service)
-    return <span>Loading...</span>;
+    return <div id="preloader"></div>;
 
   if (error && error.status === 404) return <NotFound />;
 
   return (
     <Layout>
-      <Breadcrumb heading={service.slug} pageName={service.title} />
+      <Breadcrumb heading={service.title} pageName={service.title} />
 
       <div className="page-head area-padding">
         <div className="container">
@@ -62,25 +62,29 @@ const ServiceDetails = () => {
                     <h4>{t('related_projects')}</h4>
 
                     <div className="recent-post">
-                      {relatedProjects?.map((item) => (
-                        <div className="recent-single-post" key={item.slug}>
-                          <div className="post-img">
-                            <Link to={`/projects/${item.slug}`}>
-                              <img
-                                src={item.images[0].image}
-                                alt={item.title}
-                              />
-                            </Link>
-                          </div>
-                          <div className="pst-content">
-                            <p>
+                      {(relatedProjects?.length ?? 0) > 0 ? (
+                        relatedProjects?.map((item) => (
+                          <div className="recent-single-post" key={item.slug}>
+                            <div className="post-img">
                               <Link to={`/projects/${item.slug}`}>
-                                {item.title}
+                                <img
+                                  src={item.images[0].image}
+                                  alt={item.title}
+                                />
                               </Link>
-                            </p>
+                            </div>
+                            <div className="pst-content">
+                              <p>
+                                <Link to={`/projects/${item.slug}`}>
+                                  {item.title}
+                                </Link>
+                              </p>
+                            </div>
                           </div>
-                        </div>
-                      ))}
+                        ))
+                      ) : (
+                        <span>{t('related_projects_log')}</span>
+                      )}
                     </div>
                   </div>
                 </div>

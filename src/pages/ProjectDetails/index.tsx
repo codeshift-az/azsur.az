@@ -1,39 +1,28 @@
 import { useState } from 'react';
+import { useLocation } from 'react-router-dom';
 
-// Reat-Light
+import useSWR from 'swr';
 import Lightbox from 'yet-another-react-lightbox';
 import Inline from 'yet-another-react-lightbox/plugins/inline';
 
-// Assets
-import { ProjectDetailImg, ProjectImg1, ProjectImg2 } from '@/assets/images';
-
-// Components
 import Breadcrumb from '@/components/Breadcrumb';
 import Layout from '@/components/Layout';
+import Preloader from '@/components/Preloader';
 
-interface imageSlider {
-  id: number;
-  url: string;
-}
-interface ProjectDetail {
-  slug: string;
-  title: string;
-  description: string;
-  images: imageSlider[];
-}
+import { getProjectDetails } from '@/api/project';
+
+import NotFound from '../NotFound';
 
 const ProjectDetails = () => {
-  const projectData: ProjectDetail = {
-    slug: 'Project',
-    title: 'Project Details',
-    images: [
-      { id: 1, url: ProjectDetailImg },
-      { id: 2, url: ProjectImg1 },
-      { id: 3, url: ProjectImg2 },
-    ],
-    description:
-      'Aliquam et metus pharetra, bibendum massa nec, fermentum odio. Nunc id leo ultrices, mollis ligula in, finibus tortor. Mauris eu dui ut lectus fermentum eleifend.Pellentesque faucibus sem ante, non malesuada odio variusnec. Suspendisse potenti. Proin consectetur aliquam odionec fringilla. Sed interdum at justo in efficitur. Vivamusgravida volutpat sodales. Fusce ornare sit amet ligulacondimentum sagittis.',
-  };
+  const { pathname } = useLocation();
+
+  const {
+    data: project,
+    isLoading,
+    error,
+  } = useSWR(['project', pathname], () =>
+    getProjectDetails(pathname.split('/').pop() as string)
+  );
 
   const [open, setOpen] = useState(false);
   const [index, setIndex] = useState(0);
@@ -43,11 +32,14 @@ const ProjectDetails = () => {
   const updateIndex = ({ index: current }: { index: number }) =>
     setIndex(current);
 
-  const slides = projectData.images.map((image) => ({ src: image.url }));
+  const slides = project?.images.map((image) => ({ src: image?.image }));
 
+  if (isLoading || !project) return <Preloader />;
+
+  if (error && error.status === 404) return <NotFound />;
   return (
     <Layout>
-      <Breadcrumb heading={projectData.slug} pageName={projectData.title} />
+      <Breadcrumb heading={project.title} pageName={project.title} />
       <div className="page-head area-padding">
         <div className="container">
           <div className="row">
@@ -76,31 +68,30 @@ const ProjectDetails = () => {
                       },
                     }}
                   />
-
-                  <Lightbox
-                    open={open}
-                    close={toggleOpen(false)}
-                    index={index}
-                    slides={slides}
-                    on={{ view: updateIndex }}
-                    animation={{ fade: 0 }}
-                    controller={{
-                      closeOnPullDown: true,
-                      closeOnBackdropClick: true,
-                    }}
-                  />
                 </div>
                 <div className="post-information">
-                  <h2>{projectData.title}</h2>
+                  <h2>{project.title}</h2>
 
-                  <div className="entry-content">{projectData.description}</div>
+                  <div className="entry-content">{project.description}</div>
                 </div>
               </article>
-              <div className="clear"></div>
             </div>
           </div>
         </div>
       </div>
+
+      <Lightbox
+        open={open}
+        close={toggleOpen(false)}
+        index={index}
+        slides={slides}
+        on={{ view: updateIndex }}
+        animation={{ fade: 0 }}
+        controller={{
+          closeOnPullDown: true,
+          closeOnBackdropClick: true,
+        }}
+      />
     </Layout>
   );
 };

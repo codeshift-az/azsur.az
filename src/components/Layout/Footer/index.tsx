@@ -1,12 +1,14 @@
 import { Link } from 'react-router-dom';
 
-// Assets
+import { useTranslation } from 'react-i18next';
+
 import { LOGO } from '@/assets/images';
 
-// Constants
 import { CONTACT_DETAILS } from '@/constants';
 
 const Footer = () => {
+  const { t } = useTranslation('pages', { keyPrefix: 'footer' });
+
   return (
     <footer>
       <div className="footer-area">
@@ -21,11 +23,7 @@ const Footer = () => {
                     </Link>
                   </div>
 
-                  <p>
-                    Redug Lares dolor sit amet, consectetur adipisicing elit.
-                    Minima in nostrum, veniam. Esse est assumenda inventore,
-                    facere adipisci tenetur.
-                  </p>
+                  <p>{t('description')}</p>
 
                   <div className="footer-icons">
                     <ul>
@@ -54,17 +52,20 @@ const Footer = () => {
             <div className="col-lg-3 col-md-3 col-sm-3 col-xs-12">
               <div className="footer-content">
                 <div className="footer-head">
-                  <h4>Information</h4>
-                  <p>You can contact us our consectetur adipisicing elit</p>
+                  <h4>{t('information.title')}</h4>
+                  <p>{t('information.description')}</p>
                   <div className="footer-contacts">
                     <p>
-                      <span>Tel:</span> {CONTACT_DETAILS.phone}
+                      <span>{t('information.tel')}:</span>{' '}
+                      {CONTACT_DETAILS.phone}
                     </p>
                     <p>
-                      <span>Email:</span> {CONTACT_DETAILS.email}
+                      <span>{t('information.email')}:</span>{' '}
+                      {CONTACT_DETAILS.email}
                     </p>
                     <p>
-                      <span>Address:</span> {CONTACT_DETAILS.address}
+                      <span>{t('information.address')}:</span>{' '}
+                      {CONTACT_DETAILS.address}
                     </p>
                   </div>
                 </div>
@@ -75,25 +76,25 @@ const Footer = () => {
             <div className="col-lg-3 col-md-3 col-sm-5 col-xs-12">
               <div className="footer-content">
                 <div className="footer-head">
-                  <h4>flicker</h4>
+                  <h4>{t('flicker')}</h4>
                   <div className="flicker-img">
                     <Link to="#">
-                      <img src="/src/assets/images/footer/1.jpg" />
+                      <img src="https://placehold.co/80x80/Webp" />
                     </Link>
                     <Link to="#">
-                      <img src="/src/assets/images/footer/7.jpg" />
+                      <img src="https://placehold.co/80x80/Webp" />
                     </Link>
                     <Link to="#">
-                      <img src="/src/assets/images/footer/8.jpg" />
+                      <img src="https://placehold.co/80x80/Webp" />
                     </Link>
                     <Link to="#">
-                      <img src="/src/assets/images/footer/4.jpg" />
+                      <img src="https://placehold.co/80x80/Webp" />
                     </Link>
                     <Link to="#">
-                      <img src="/src/assets/images/footer/5.jpg" />
+                      <img src="https://placehold.co/80x80/Webp" />
                     </Link>
                     <Link to="#">
-                      <img src="/src/assets/images/footer/6.jpg" />
+                      <img src="https://placehold.co/80x80/Webp" />
                     </Link>
                   </div>
                 </div>
@@ -105,34 +106,34 @@ const Footer = () => {
               <div className="footer-content">
                 <div className="footer-head">
                   <div className="popular-tag">
-                    <h4>tags</h4>
+                    <h4>{t('tags.title')}</h4>
                     <ul>
                       <li>
-                        <Link to="#">Building</Link>
+                        <Link to="#">{t('tags.button1')}</Link>
                       </li>
                       <li>
-                        <Link to="#">Isolation</Link>
+                        <Link to="#">{t('tags.button2')}</Link>
                       </li>
                       <li>
-                        <Link to="#">Interior</Link>
+                        <Link to="#">{t('tags.button3')}</Link>
                       </li>
                       <li>
-                        <Link to="#">Electrical</Link>
+                        <Link to="#">{t('tags.button4')}</Link>
                       </li>
                       <li>
-                        <Link to="#">Energy</Link>
+                        <Link to="#">{t('tags.button5')}</Link>
                       </li>
                       <li>
-                        <Link to="#">floring</Link>
+                        <Link to="#">{t('tags.button6')}</Link>
                       </li>
                       <li>
-                        <Link to="#">painting</Link>
+                        <Link to="#">{t('tags.button7')}</Link>
                       </li>
                       <li>
-                        <Link to="#">Building</Link>
+                        <Link to="#">{t('tags.button8')}</Link>
                       </li>
                       <li>
-                        <Link to="#">Building</Link>
+                        <Link to="#">{t('tags.button9')}</Link>
                       </li>
                     </ul>
                   </div>

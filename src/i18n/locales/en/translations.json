@@ -1,10 +1,83 @@
 {
   "pages": {
+    "common": {
+      "aboutUs": {
+        "title": "About Us",
+        "description": "Redug lerse dolor sit amet, consectetur adipisicing elit. Quaefacilis, pariatur. Expedita nihil, tenetur neque aliquid animiimpedit molestias reiciendis sint quis. Consectetur molestiasdolore rem, eaque adipisci consequuntur placeat! Redug lersedolor sit amet, consectetur adipisicing elit. Natus idrepellat consequatur numquam accusantium minus eligendi veniameaque est enim praesentium architecto maiores nihil debitiseius, eos, vel minima. Laudantium accusantium minus eligendiveniam eaque est enim praesentium architecto maiores nihildebitis eius, eos,accusantium minus eligendi veniam eaque estenim praesentium architecto",
+        "panel1_text": "Redug lerse dolor sit amet, consectetur adipisicingelit. Aspernatur, tempore, commodi quas mollitia doloremagnam quidem repellat, culpa voluptates laboriosammaiores alias accusamus recusandae vero",
+        "panel2_text": "Redug lerse dolor sit amet, consectetur adipisicingelit. Aspernatur, tempore, commodi quas mollitia doloremagnam quidem repellat, culpa voluptates laboriosammaiores alias accusamus recusandae vero",
+        "panel3_text": "Redug lerse dolor sit amet, consectetur adipisicingelit. Aspernatur, tempore, commodi quas mollitia doloremagnam quidem repellat, culpa voluptates laboriosammaiores alias accusamus recusandae vero",
+        "panel4_text": "Redug lerse dolor sit amet, consectetur adipisicingelit. Aspernatur, tempore, commodi quas mollitia doloremagnam quidem repellat, culpa voluptates laboriosammaiores alias accusamus recusandae vero",
+        "nav1_text": "Redug lerse dolor sit amet, consectetur adipisicing elit.Animi vero excepturi magnam ducimus adipisci voluptas,praesentium maxime necessitatibus in dolor dolores undeab, libero quo. Aut, laborum sequi ipsam nobis! Reduglerse dolor sit amet, consectetur adipisicing elit.Expedita hic maxime commodi cum fugiat, architectoducimus, doloribus fuga itaque omnis placeat, optiorecusandae saepe porro dolore error voluptatibus ipsamtempora.",
+        "nav2_text": "Redug lerse dolor sit amet, consectetur adipisicing elit.Animi vero excepturi magnam ducimus adipisci voluptas,praesentium maxime necessitatibus in dolor dolores undeab, libero quo. Aut, laborum sequi ipsam nobis! Reduglerse dolor sit amet, consectetur adipisicing elit.Expedita hic maxime commodi cum fugiat, architectoducimus, doloribus fuga itaque omnis placeat, optiorecusandae saepe porro dolore error voluptatibus ipsamtempora.",
+        "nav3_text": "Redug lerse dolor sit amet, consectetur adipisicing elit.Animi vero excepturi magnam ducimus adipisci voluptas,praesentium maxime necessitatibus in dolor dolores undeab, libero quo. Aut, laborum sequi ipsam nobis! Reduglerse dolor sit amet, consectetur adipisicing elit.Expedita hic maxime commodi cum fugiat, architectoducimus, doloribus fuga itaque omnis placeat, optiorecusandae saepe porro dolore error voluptatibus ipsamtempora."
+      },
+      "buttons": {
+        "ourService": "Our Service",
+        "getQuate": "Get a quate",
+        "contactButton": "Contact Here"
+      },
+      "ourLatestProject": "Our-latest projects",
+      "subscribe": "Wellcome to our Royalsteel construction company"
+    },
+    "header": {
+      "nav1": "Home",
+      "nav2": "Projects",
+      "nav3": "Services",
+      "nav4": "Certificates",
+      "nav5": "About",
+      "nav6": "Contact"
+    },
+    "footer": {
+      "description": "Redug Lares dolor sit amet, consectetur adipisicing elit. Minima in nostrum, veniam. Esse est assumenda inventore, facere adipisci tenetur.",
+      "information": {
+        "title": "Information",
+        "description": "You can contact us our consectetur adipisicing elit",
+        "tel": "Tel",
+        "email": "Email",
+        "address": "Address"
+      },
+      "flicker": "Flicker",
+      "tags": {
+        "title": "Tags",
+        "button1": "Building",
+        "button2": "Isolation",
+        "button3": "Interior",
+        "button4": "Electrical",
+        "button5": "Energy",
+        "button6": "Floring",
+        "button7": "Painting",
+        "button8": "Building",
+        "button9": "Building"
+      }
+    },
     "home": {
-      "title": "Home page"
+      "title": "Home page",
+      "banner": {
+        "title": "Wellcome to our company",
+        "title2": "Professional Constructions"
+      }
+    },
+    "about": {
+      "ourTeams": "Our teams",
+      "ourSkill": "Our skill"
+    },
+    "contact": {
+      "title": "Contact information",
+      "form": {
+        "name": "Name (required)",
+        "email": "Email (required)",
+        "subject": "Subjects",
+        "message": "Message",
+        "button": "Submit"
+      }
+    },
+    "service": {
+      "button": "Read more"
     },
     "serviceDetails": {
-      "related_projects": "Related projects"
+      "related_projects": "Related projects",
+      "related_projects_log": "No related projects."
     },
     "notFound": {
       "title": "Page not found",

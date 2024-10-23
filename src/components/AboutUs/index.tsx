@@ -1,7 +1,6 @@
 import { useState } from 'react';
 
-// Assets
-import { AboutUsImg } from '@/assets/images';
+import { useTranslation } from 'react-i18next';
 
 const AboutUs = () => {
   const [showPanel, setShowPanel] = useState<boolean[]>([
@@ -12,6 +11,8 @@ const AboutUs = () => {
   ]);
 
   const [navTabs, setNavTabs] = useState<boolean[]>([true, false, false]);
+
+  const { t } = useTranslation('pages', { keyPrefix: 'common.aboutUs' });
 
   const togglePanel = (index: number) => {
     setShowPanel((prev) => prev.map((item, i) => (index == i ? !item : false)));
@@ -27,7 +28,7 @@ const AboutUs = () => {
         <div className="row">
           <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <div className="section-headline text-left">
-              <h3>about us</h3>
+              <h3>{t('title')}</h3>
             </div>
           </div>
         </div>
@@ -36,7 +37,7 @@ const AboutUs = () => {
           <div className="col-lg-6 col-md-6 col-sm-12 col-xs-12">
             <div className="about-dec">
               <div className="about-img">
-                <img src={AboutUsImg} alt="" />
+                <img src="https://placehold.co/555x361/webp" alt="" />
               </div>
             </div>
           </div>
@@ -63,12 +64,7 @@ const AboutUs = () => {
                       transition: 'max-height 0.7s ease-out',
                     }}>
                     <div className="panel-body">
-                      <p>
-                        Redug lerse dolor sit amet, consectetur adipisicing
-                        elit. Aspernatur, tempore, commodi quas mollitia dolore
-                        magnam quidem repellat, culpa voluptates laboriosam
-                        maiores alias accusamus recusandae vero{' '}
-                      </p>
+                      <p>{t('panel1_text')}</p>
                     </div>
                   </div>
                 </div>
@@ -93,15 +89,7 @@ const AboutUs = () => {
                       transition: 'max-height 0.7s ease-out',
                     }}>
                     <div className="panel-body">
-                      <p>
-                        Redug lerse dolor sit amet, consectetur adipisicing
-                        elit. Aspernatur, tempore, commodi quas mollitia dolore
-                        magnam quidem repellat, culpa voluptates laboriosam
-                        maiores alias accusamus recusandae vero aperiam sint
-                        nulla beatae eos. ipsum dolor sit amet, consectetur
-                        adipisicing elit. Repellendus nulla praesentium
-                        cupiditate, eos sequi ullam nesciunt enim id, distinctio{' '}
-                      </p>
+                      <p>{t('panel2_text')}</p>
                     </div>
                   </div>
                 </div>
@@ -124,15 +112,7 @@ const AboutUs = () => {
                       transition: 'max-height 0.7s ease-out',
                     }}>
                     <div className="panel-body">
-                      <p>
-                        Redug lerse dolor sit amet, consectetur adipisicing
-                        elit. Aspernatur, tempore, commodi quas mollitia dolore
-                        magnam quidem repellat, culpa voluptates laboriosam
-                        maiores alias accusamus recusandae vero aperiam sint
-                        nulla beatae eos. ipsum dolor sit amet, consectetur
-                        adipisicing elit. Repellendus nulla praesentium
-                        cupiditate, eos sequi ullam nesciunt enim id, distinctio{' '}
-                      </p>
+                      <p>{t('panel3_text')}</p>
                     </div>
                   </div>
                 </div>
@@ -155,14 +135,7 @@ const AboutUs = () => {
                       transition: 'max-height 0.7s ease-out',
                     }}>
                     <div className="panel-body">
-                      <p>
-                        Redug lerse dolor sit amet, consectetur adipisicing
-                        elit. Aspernatur, tempore, commodi quas mollitia dolore
-                        magnam quidem repellat, culpa voluptates laboriosam
-                        maiores alias accusamus recusandae vero aperiam sint
-                        nulla beatae eos. ipsum dolor sit amet, consectetur
-                        adipisicing elit.
-                      </p>
+                      <p>{t('panel4_text')}</p>
                     </div>
                   </div>
                 </div>
@@ -176,20 +149,7 @@ const AboutUs = () => {
             <div className="about-head">
               <div className="about-text">
                 <h4 className="sec-head">Who we Are</h4>
-                <p>
-                  Redug lerse dolor sit amet, consectetur adipisicing elit. Quae
-                  facilis, pariatur. Expedita nihil, tenetur neque aliquid animi
-                  impedit molestias reiciendis sint quis. Consectetur molestias
-                  dolore rem, eaque adipisci consequuntur placeat! Redug lerse
-                  dolor sit amet,
-                  <br /> consectetur adipisicing elit. Natus id repellat
-                  consequatur numquam accusantium minus eligendi veniam eaque
-                  est enim praesentium architecto maiores nihil debitis eius,
-                  eos, vel minima. Laudantium accusantium minus eligendi veniam
-                  eaque est enim praesentium architecto maiores nihil debitis
-                  eius, eos,accusantium minus eligendi veniam eaque est enim
-                  praesentium architecto
-                </p>
+                <p>{t('description')}</p>
               </div>
             </div>
           </div>
@@ -221,17 +181,7 @@ const AboutUs = () => {
                 <div className="tab-inner">
                   <div className="event-content head-team">
                     <h5>Building</h5>
-                    <p>
-                      Redug lerse dolor sit amet, consectetur adipisicing elit.
-                      Animi vero excepturi magnam ducimus adipisci voluptas,
-                      praesentium maxime necessitatibus in dolor dolores unde
-                      ab, libero quo. Aut, laborum sequi ipsam nobis! Redug
-                      lerse dolor sit amet, consectetur adipisicing elit.
-                      Expedita hic maxime commodi cum fugiat, architecto
-                      ducimus, doloribus fuga itaque omnis placeat, optio
-                      recusandae saepe porro dolore error voluptatibus ipsam
-                      tempora.
-                    </p>
+                    <p>{t('nav1_text')}</p>
                   </div>
                 </div>
               </div>
@@ -239,16 +189,7 @@ const AboutUs = () => {
                 <div className="tab-inner">
                   <div className="event-content head-team">
                     <h5>Renovation</h5>
-                    <p>
-                      hic quis repellat cum ullam, fuga deleniti illum nemo!
-                      olores fugiat necessitatibus, magni voluptatibus hic quis
-                      repellat cum ullam, fuga deleniti illum nemo! Redug lerse
-                      dolor sit amet, consectetur adipisicing elit. Cumque
-                      deseruntmagni voluptatibus hic quis repellat cum ullam,
-                      fuga deleniti illum nemo!dolores fugiat necessitatibus,
-                      magni voluptatibus beatae mollitia. Eaque mollitia,
-                      incidunt voluptates dolores fugiat necessitatibus,
-                    </p>
+                    <p>{t('nav2_text')}</p>
                   </div>
                 </div>
               </div>
@@ -256,17 +197,7 @@ const AboutUs = () => {
                 <div className="tab-inner">
                   <div className="event-content head-team">
                     <h5>Isolation</h5>
-                    <p>
-                      nemo!dolores fugiat necessitatibus, magni voluptatibus hic
-                      quis repellat cum ullam, fuga deleniti illum nemo! olores
-                      fugiat necessitatibus, magni voluptatibus hic quis
-                      repellat cum ullam, fuga deleniti illum nemo! Redug lerse
-                      dolor sit amet, consectetur adipisicing elit. Cumque
-                      deserunt beatae mollitia. Eaque mollitia, incidunt
-                      voluptates dolores fugiat necessitatibus, magni
-                      voluptatibus hic quis repellat cum ullam, fuga deleniti
-                      illum
-                    </p>
+                    <p>{t('nav3_text')}</p>
                   </div>
                 </div>
               </div>

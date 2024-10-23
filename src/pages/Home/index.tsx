@@ -1,13 +1,14 @@
 import { useTranslation } from 'react-i18next';
 
-// Helmet
 import { Helmet } from 'react-helmet-async';
 
-// Components
+import AboutUs from '@/components/AboutUs';
 import Layout from '@/components/Layout';
+import Subscribe from '@/components/Subscribe';
 
-// Helpers
 import { getPageTitle } from '@/helpers';
+
+import * as Sections from './sections';
 
 const Home = () => {
   const { t } = useTranslation('pages', { keyPrefix: 'home' });
@@ -23,8 +24,13 @@ const Home = () => {
         <meta property="og:description" content={t('description')} />
         <meta name="description" content={t('description')} />
       </Helmet>
-
-      <h1>{t('title')}</h1>
+      <Sections.Banner />
+      <Subscribe />
+      <Sections.ServiceArea />
+      <Sections.LatestProjects />
+      <AboutUs />
+      <Sections.ReviewArea />
+      <Sections.BrandArea />
     </Layout>
   );
 };
