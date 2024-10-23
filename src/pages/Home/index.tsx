@@ -1,16 +1,13 @@
 import { useTranslation } from 'react-i18next';
 
-// Helmet
 import { Helmet } from 'react-helmet-async';
 
-// Components
+import AboutUs from '@/components/AboutUs';
 import Layout from '@/components/Layout';
 import Subscribe from '@/components/Subscribe';
 
-// Helpers
 import { getPageTitle } from '@/helpers';
 
-import { AboutUs } from '../About/sections';
 import * as Sections from './sections';
 
 const Home = () => {

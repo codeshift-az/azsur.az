@@ -2772,3 +2772,18 @@ span.email-notes {
     margin: 10px 0px;
   }
 }
+
+div#preloader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  background: #333 url('../images/preloader/preloader.gif') no-repeat center
+    center;
+}
+.clear {
+  clear: both;
+}

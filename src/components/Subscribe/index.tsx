@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
 const Subscribe = () => {
-  const { t } = useTranslation('pages', { keyPrefix: 'home' });
+  const { t } = useTranslation('pages', { keyPrefix: 'common' });
 
   return (
     <div className="suscribe-area">
@@ -13,7 +13,7 @@ const Subscribe = () => {
             <div className="suscribe-text text-center">
               <h3>{t('subscribe')}</h3>
               <Link className="sus-btn" to="/contact">
-                {t('common.buttons.getQuate')}
+                {t('buttons.getQuate')}
               </Link>
             </div>
           </div>

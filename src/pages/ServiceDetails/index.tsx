@@ -50,7 +50,7 @@ const ServiceDetails = () => {
 
   return (
     <Layout>
-      <Breadcrumb heading={service.slug} pageName={service.title} />
+      <Breadcrumb heading={service.title} pageName={service.title} />
 
       <div className="page-head area-padding">
         <div className="container">

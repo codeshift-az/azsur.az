@@ -8,15 +8,19 @@ import { Navigation, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import useSWR from 'swr';
 
-import { getSlide } from '@/api/slide';
+import Preloader from '@/components/Preloader';
 
-import NotFound from '@/pages/NotFound';
+import { getSlideList } from '@/api/slide';
 
 const Banner = () => {
-  const { data: Slides, isLoading, error } = useSWR('slides', () => getSlide());
-  if (isLoading || !Slides) return <div id="preloader"></div>;
+  const {
+    data: slides,
+    isLoading,
+    error,
+  } = useSWR('slides', () => getSlideList());
+  if (isLoading || !slides) return <Preloader />;
 
-  if (error && error.status === 404) return <NotFound />;
+  if (error && error.status === 404) return null;
   return (
     <div className="slider-area">
       <Swiper
@@ -24,7 +28,7 @@ const Banner = () => {
         navigation={true}
         modules={[Pagination, Navigation]}
         className="mySwiper">
-        {Slides.map((slide, index) => (
+        {slides.map((slide, index) => (
           <SwiperSlide key={index}>
             <img src={slide.image} alt="" loading="lazy" />
             <div className="swiper-lazy-preloader swiper-lazy-preloader-white"></div>

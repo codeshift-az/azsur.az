@@ -1,5 +1,3 @@
-import { Link } from 'react-router-dom';
-
 import 'swiper/css';
 import 'swiper/css/autoplay';
 import 'swiper/css/effect-fade';
@@ -18,7 +16,7 @@ const slides = [
   { img: 'https://placehold.co/163x100/webp' },
   { img: 'https://placehold.co/163x100/webp' },
 ];
-const BrandCarousel = () => {
+const BrandArea = () => {
   return (
     <div className="brand-area area-padding">
       <div className="container">
@@ -44,9 +42,9 @@ const BrandCarousel = () => {
                 {slides.map((logo, index) => (
                   <SwiperSlide key={index}>
                     <div className="single-brand-item">
-                      <Link to="#">
+                      <a role="button">
                         <img src={logo.img} alt={`logo-${index}`} />
-                      </Link>
+                      </a>
                     </div>
                   </SwiperSlide>
                 ))}
@@ -58,4 +56,4 @@ const BrandCarousel = () => {
     </div>
   );
 };
-export default BrandCarousel;
+export default BrandArea;

@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 
 import { useTranslation } from 'react-i18next';
 
-const membersData = [
+const members = [
   {
     name: ' Susan Bolt',
     position: 'Cheif member',
@@ -43,7 +43,7 @@ const OurTeams = () => {
         </div>
         <div className="row">
           <div className="team-member">
-            {membersData.map((item) => {
+            {members.map((item) => {
               return (
                 <div className="col-lg-3 col-md-3 col-sm-4" key={item.id}>
                   <div className="single-member">

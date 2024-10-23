@@ -1,24 +1,27 @@
 import { Link } from 'react-router-dom';
 
+import { useTranslation } from 'react-i18next';
+
 import useSWR from 'swr';
 
 import Breadcrumb from '@/components/Breadcrumb';
 import Layout from '@/components/Layout';
+import Preloader from '@/components/Preloader';
 
 import { getServiceList } from '@/api/service';
 
-import NotFound from '../NotFound';
-
 const Services = () => {
+  const { t } = useTranslation('pages', { keyPrefix: 'service' });
+
   const {
-    data: service,
+    data: services,
     isLoading,
     error,
   } = useSWR('service', () => getServiceList());
 
-  if (isLoading || !service) return <div id="preloader"></div>;
+  if (isLoading || !services) return <Preloader />;
 
-  if (error && error.status === 404) return <NotFound />;
+  if (error && error.status === 404) return null;
 
   return (
     <Layout>
@@ -26,7 +29,7 @@ const Services = () => {
       <div className="page-head area-padding">
         <div className="container">
           <div className="row">
-            {service.map((item, index) => {
+            {services.map((item, index) => {
               return (
                 <div className="col-lg-4 col-md-6 col-sm-12" key={index}>
                   <div className="blog-post blog-1 ">
@@ -45,7 +48,7 @@ const Services = () => {
                         <Link
                           to={`/services/${item.slug}`}
                           className="blog-btn">
-                          Read More
+                          {t('button')}
                         </Link>
                       </div>
                     </div>

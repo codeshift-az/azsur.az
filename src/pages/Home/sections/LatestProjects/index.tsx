@@ -6,15 +6,15 @@ import { useTranslation } from 'react-i18next';
 import useSWR from 'swr';
 import Lightbox from 'yet-another-react-lightbox';
 
+import Preloader from '@/components/Preloader';
+
 import { getProjectList } from '@/api/project';
 
-import NotFound from '@/pages/NotFound';
-
 const LatestProjects = () => {
-  const { t } = useTranslation('pages', { keyPrefix: 'home' });
+  const { t } = useTranslation('pages', { keyPrefix: 'common' });
 
   const {
-    data: Projects,
+    data: projects,
     isLoading,
     error,
   } = useSWR('projects', () => getProjectList());
@@ -26,9 +26,9 @@ const LatestProjects = () => {
     setOpen(true);
   };
 
-  if (isLoading || !Projects) return <div id="preloader"></div>;
+  if (isLoading || !projects) return <Preloader />;
 
-  if (error && error.status === 404) return <NotFound />;
+  if (error && error.status === 404) return null;
   return (
     <div className="project-area area-padding">
       <div className="container">
@@ -40,7 +40,7 @@ const LatestProjects = () => {
           </div>
         </div>
         <div className="row">
-          {Projects.map((item, index) => (
+          {projects.map((item, index) => (
             <div className="col-lg-4 col-md-4 col-sm-6 col-xs-12" key={index}>
               <div className="single-awesome-project first-item">
                 <div className="awesome-img">
@@ -52,7 +52,7 @@ const LatestProjects = () => {
                       <h5>
                         <Link to={`/projects/${item.slug}`}>{item.title}</Link>
                       </h5>
-                      <span>building</span>
+                      <span>{item.service.title}</span>
                     </div>
                     <ul className="project-action-btn">
                       <li>

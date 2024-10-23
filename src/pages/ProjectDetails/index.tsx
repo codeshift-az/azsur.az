@@ -7,6 +7,7 @@ import Inline from 'yet-another-react-lightbox/plugins/inline';
 
 import Breadcrumb from '@/components/Breadcrumb';
 import Layout from '@/components/Layout';
+import Preloader from '@/components/Preloader';
 
 import { getProjectDetails } from '@/api/project';
 
@@ -33,12 +34,12 @@ const ProjectDetails = () => {
 
   const slides = project?.images.map((image) => ({ src: image?.image }));
 
-  if (isLoading || !project) return <div id="preloader"></div>;
+  if (isLoading || !project) return <Preloader />;
 
   if (error && error.status === 404) return <NotFound />;
   return (
     <Layout>
-      <Breadcrumb heading={project.slug} pageName={project.title} />
+      <Breadcrumb heading={project.title} pageName={project.title} />
       <div className="page-head area-padding">
         <div className="container">
           <div className="row">
@@ -74,7 +75,6 @@ const ProjectDetails = () => {
                   <div className="entry-content">{project.description}</div>
                 </div>
               </article>
-              <div className="clear"></div>
             </div>
           </div>
         </div>
